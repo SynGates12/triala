@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+    {% block title %} Crea el teu usuari {% endblock %}
+    
+    {% block extra-head %}
+    {% load static %}  
+        <link href="{% static "css/global.css"%}" rel="stylesheet">
+        <link href="{% static "css/login.css"%}" rel="stylesheet">
+    {% endblock %}
+    
+    {% block content %}
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="{% url "guitarra:index" %}">Triala.cat</a>
+            
+            
+          </div>
+      
+      </nav>
+    <div id="container">
+        
+       
+        <div id="formulari">
+           
+            <div id="createicon"></div>  
+            <h1 id="creaUsuari">Crea el teu usuari</h1> 
+            
+                <form id="cont-log" action="" method="POST">
+                     
+                {% for field in form.visible_fields %}
+                  {% csrf_token %}
+	              <div class="form-group">
+                    
+      	            {{ field }}
+      	            
+      	            {% if field.help_text %}
+      	            {% endif %}
+      		        {% if field.errors %}		        	
+      			        <div class="alert alert-danger">
+      			        <button type="button" class="close" data-dismiss="alert">&times;</button>
+      				        <ul>
+      				          {% for error in field.errors%}
+      				          <li>{{ error }}</li>
+      			              {% endfor %}
+      			            </ul>
+      		         	</div>
+      		        {% endif %}
+      	        </div>        
+       {% endfor %}
+       <br><br>
+              <input type="submit" class="formulari boto btn btn-primary btn-lg" value="Crea">
+        </div>
+    {% endblock %}

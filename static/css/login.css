@@ -1,0 +1,71 @@
+body{
+    background-image: url("/static/images/backguitar.jpg");
+    background-repeat:no-repeat;
+    background-position: center; 
+    background-size:auto;
+}
+
+#formulari{
+    display: flex;
+    flex-direction:column !important;
+    justify-content:center !important;
+    margin-top: 200px;
+}
+
+#cont-log{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    background:rgba(0,0,0,0.5);
+    padding:50px;
+    border-radius:5px;
+    color:black;
+}
+
+.form-group{
+    width:100% !important;
+}
+
+input{
+    width:100% !important;
+    padding:10px;
+}
+
+#crear{
+    margin:auto;
+    color:#333 !important;
+}
+
+a{
+    color:#333;
+}
+
+h1{
+    color:white;
+}
+
+#lock{
+    background-image: url("/static/images/lock.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    width:10%;
+    height: 100px;
+    margin:auto;
+}
+
+#creaUsuari{
+    margin:auto;
+    color:#474A55;
+}
+
+#createicon{
+    background-image: url("/static/images/create.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    width:10%;
+    height: 100px;
+    margin:auto;
+}

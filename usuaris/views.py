@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404, redirect, render_to_response
 from .forms import LoginForm, nou_usuari_form, Comenta
 from django.core.urlresolvers import reverse
@@ -22,7 +23,7 @@ def crear_usuari(request, perfil_id=None):
         if form.is_valid():
             email = form.cleaned_data['email']
             repetit = User.objects.filter( username = email )
-            #mirem si està repetit i llencem missatge error "cuidadín"
+            #mirem si esta repetit i llencem missatge error 
             if repetit:
                 messages.error( request, "Aquest nom d'usuari ja existeix")
             else:
@@ -83,3 +84,37 @@ def login(request):
 def logout(request):
     authLogout( request )
     return redirect( 'guitarra:index')
+    
+def modificar_perfil(request):
+    usuariForm = modelform_factory(User,fields=("first_name","last_name"))
+    profileForm = modelform_factory(Perfil,fields=("CP", "localitat"))
+    unPerfil = request.user.perfil
+    unUsuari = request.user
+    
+    if request.method == 'POST':
+        formUsuari = usuariForm(request.POST, instance = unUsuari)
+        formPerfil = profileForm(request.POST, request.FILES, instance = unPerfil)
+        formUsuariValid = formUsuari.is_valid()
+        formPerfilValid = formPerfil.is_valid()
+            
+        if formUsuariValid and formPerfilValid:
+            formUsuari.save()
+            formPerfil.save()
+            messages.info(request,"S'han modificat les dades correctament")
+            return redirect('guitarra:index')
+    else:
+        formUsuari = usuariForm(instance = unUsuari)
+        formPerfil = profileForm(instance = unPerfil)
+        
+    for f in formUsuari.fields:
+       formUsuari.fields[f].widget.attrs['class'] = 'formulari'
+    for f in formPerfil.fields:
+       formPerfil.fields[f].widget.attrs['class'] = 'formulari'
+   
+    formUsuari.fields['first_name'].widget.attrs['placeholder']="Nom"
+    formUsuari.fields['last_name'].widget.attrs['placeholder']="Cognoms"
+    formPerfil.fields['CP'].widget.attrs['placeholder']="Codi postal"
+    formPerfil.fields['localitat'].widget.attrs['placeholder']="Localitat"
+    
+    return render(request, 'modificar_perfil.html', {'formPerfil': formPerfil, 
+                                                     'formUsuari': formUsuari } )    

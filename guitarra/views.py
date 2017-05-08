@@ -8,3 +8,15 @@ from django.db.models import Q
 
 
 # Create your views here.
+def index(request):
+    return render(request, "guitarra/index.html")
+    
+def grups(request):
+    tots_grups = Grup.objects.all();
+    ctx = {'llista_grups' : tots_grups}
+    return render (request, "guitarra/grups.html", ctx)
+    
+def estils(request):
+    tots_estils = Estil_musica.objects.all();
+    ctx = {'llista_estils' : tots_estils}
+    return render (request, "guitarra/estil.html", ctx)
