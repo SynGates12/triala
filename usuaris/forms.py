@@ -26,4 +26,12 @@ class nou_usuari_form(forms.Form):
                             )
                             
 class Comenta(forms.Form):
-    text=forms.CharField(label="Comenta...",widget=forms.Textarea)
+    text=forms.CharField(label="Comenta...",
+                        widget=forms.Textarea)
+    
+
+class GrupForm(forms.Form):
+    name=forms.CharField(label="Nom Grup",
+                         max_length=300)
+    descripcio=forms.CharField(label="Descripcio grup",
+                                max_length=1000)

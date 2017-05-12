@@ -1,10 +1,8 @@
 body{
+    background-image: url(/static/images/bacblack.png);
     background-color: #333 !important;
-    background-image: url("/static/images/stage.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
     color:white;
+    margin: 0 0 65px;
 }
 
 #logo{
@@ -19,8 +17,9 @@ body{
 
 #titol{
     text-align: center;
-    margin-bottom:100px;
-    color:white;
+    margin-top:50px;
+    margin-bottom: 50px;
+    color:#333;
 }
 
 .jumbotron{
@@ -34,22 +33,12 @@ body{
 }
 
 .prim-button{
-    background: rgba(41,41,41,0.5);
+    background-color: rgba(3,3,3,0.5);
     padding:10px;
     border-radius:200px;
     margin:auto;
 }
 
-.prim-button:hover{
-    
-    background-color:#292929;
-    
-}
-
-.tot:hover{
-    transform:scale(1.2);
-    transition:0.5s;
-}
 
 .logo-cent{
     display: flex;
@@ -69,22 +58,121 @@ body{
     background-image: url("/static/images/guitar.png");
 }
 
-.tria{
-    width:65%;
-    height: 300px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
+
 
 #container{
     width:75%;
     margin:auto;
     display: flex;
     flex-direction: column;
+    background:#E0E0DF;
     
+-webkit-box-shadow: 0px 0px 42px 26px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 42px 26px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 42px 26px rgba(0,0,0,0.75);
 }
 
 a{
-    color:white;
+    color:#333;
+}
+
+
+html{
+    position: relative; 
+    min-height: 100%;
+}
+.footer{
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    height: 100px;
+   
+}
+
+.foo{
+    height: 100%;
+    margin-bottom: 0;
+}
+
+#myCarousel{
+    margin-top:-20px;
+}
+
+
+
+
+.prim{
+    background-image: url(/static/images/stratos.jpg);
+    
+    
+}
+
+.sec{
+    background-image: url(/static/images/lespaul.jpg);
+    
+}
+
+.terc{
+    background-image: url(/static/images/telecaster.jpg);
+    
+}
+
+.tot{
+    margin-bottom: 80px;
+}
+
+@media only screen and (min-width:900px){
+        /* styles for browsers larger than 960px; */
+    .tria{
+        width:250px;
+        height: 250px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .tot:hover{
+        transform:scale(1.2);
+        transition:0.5s;
+    }
+    
+    .img-car{
+    
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: cover;
+        width:100%;
+        height:500px;
+    }
+
+
+  
+}
+
+@media only screen and (max-width:899px){
+       /* default iPad screens */
+      .tria{
+        width:200px;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .tot:hover{
+        transition:0.5s;
+    }
+    
+    .prim-button:hover{
+        background-color:white;
+    }
+    
+    .img-car{
+    
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: auto;
+        width:100%;
+    }
+
+     
 }

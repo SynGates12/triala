@@ -12,15 +12,8 @@ body{
     margin-top: 200px;
 }
 
-#cont-log{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: auto;
-    background:rgba(0,0,0,0.5);
-    padding:50px;
-    border-radius:5px;
-    color:black;
+#container{
+    background:none !important;
 }
 
 .form-group{
@@ -45,27 +38,85 @@ h1{
     color:white;
 }
 
-#lock{
-    background-image: url("/static/images/lock.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 60%;
-    width:10%;
-    height: 100px;
-    margin:auto;
-}
+
 
 #creaUsuari{
     margin:auto;
     color:#474A55;
 }
 
-#createicon{
-    background-image: url("/static/images/create.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 60%;
-    width:10%;
-    height: 100px;
-    margin:auto;
+
+
+@media only screen and (min-width:900px){
+        /* styles for browsers larger than 960px; */
+     #cont-log{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: auto;
+        background:rgba(0,0,0,0.5);
+        padding:50px;
+        border-radius:5px;
+        color:black;
+    }
+    
+    #lock{
+        background-image: url("/static/images/lock.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 60%;
+        width:10%;
+        height: 100px;
+        margin:auto;
+    }
+    
+    #createicon{
+        background-image: url("/static/images/create.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 60%;
+        width:10%;
+        height: 100px;
+        margin:auto;
+    }
+
+
+  
 }
+
+@media only screen and (max-width:899px){
+       /* default iPad screens */
+       
+       #cont-log{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: auto;
+            background:rgba(0,0,0,0.5);
+            padding:30px;
+            border-radius:5px;
+            color:black;
+        }
+        
+        #lock{
+            background-image: url("/static/images/lock.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 60%;
+            width:100px;
+            height: 100px;
+            margin:auto;
+        }
+        
+        #createicon{
+            background-image: url("/static/images/create.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 60%;
+            width:100px;
+            height: 100px;
+            margin:auto;
+        }
+
+     
+    }

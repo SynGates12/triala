@@ -25,10 +25,10 @@
         <div id="formulari">
            
             <div id="createicon"></div>  
-            <h1 id="creaUsuari">Crea el teu usuari</h1> 
+           
             
                 <form id="cont-log" action="" method="POST">
-                     
+                      <h1 id="creaUsuari">Crea el teu usuari</h1> 
                 {% for field in form.visible_fields %}
                   {% csrf_token %}
 	              <div class="form-group">

@@ -87,34 +87,30 @@ def logout(request):
     
 def modificar_perfil(request):
     usuariForm = modelform_factory(User,fields=("first_name","last_name"))
-    profileForm = modelform_factory(Perfil,fields=("CP", "localitat"))
     unPerfil = request.user.perfil
     unUsuari = request.user
     
     if request.method == 'POST':
         formUsuari = usuariForm(request.POST, instance = unUsuari)
-        formPerfil = profileForm(request.POST, request.FILES, instance = unPerfil)
+       
         formUsuariValid = formUsuari.is_valid()
-        formPerfilValid = formPerfil.is_valid()
+        
             
-        if formUsuariValid and formPerfilValid:
+        if formUsuariValid:
             formUsuari.save()
-            formPerfil.save()
+           
             messages.info(request,"S'han modificat les dades correctament")
             return redirect('guitarra:index')
     else:
         formUsuari = usuariForm(instance = unUsuari)
-        formPerfil = profileForm(instance = unPerfil)
+        
         
     for f in formUsuari.fields:
        formUsuari.fields[f].widget.attrs['class'] = 'formulari'
-    for f in formPerfil.fields:
-       formPerfil.fields[f].widget.attrs['class'] = 'formulari'
+    
    
     formUsuari.fields['first_name'].widget.attrs['placeholder']="Nom"
     formUsuari.fields['last_name'].widget.attrs['placeholder']="Cognoms"
-    formPerfil.fields['CP'].widget.attrs['placeholder']="Codi postal"
-    formPerfil.fields['localitat'].widget.attrs['placeholder']="Localitat"
     
-    return render(request, 'modificar_perfil.html', {'formPerfil': formPerfil, 
-                                                     'formUsuari': formUsuari } )    
+    return render(request, 'modificar_perfil.html', {'formUsuari': formUsuari } )    
+                                                     

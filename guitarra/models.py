@@ -1,6 +1,8 @@
 from __future__ import unicode_literals
+from django.utils.encoding import python_2_unicode_compatible
 
 from django.db import models
+
 
 # Create your models here.
 class Forma (models.Model):
@@ -20,14 +22,19 @@ class Pastilles (models.Model):
     
 class Tremolo (models.Model):
     tremolo = models.BooleanField()
-    
-class Grup (models.Model):
-    nom_grup = models.CharField(max_length=150)
-    descripcio_grup = models.CharField(max_length=500)
-    
+
 class Estil_musica (models.Model):
     nom_estil = models.CharField(max_length=150)
     descripcio_estil = models.CharField(max_length=500)
+    
+@python_2_unicode_compatible    
+class Grup (models.Model):
+    nom_grup = models.CharField(max_length=150)
+    descripcio_grup = models.CharField(max_length=500)
+    imatge = models.ImageField(upload_to='media',
+                              blank=True)
+    def __str__(self):
+        return u'%s' % self.nom_grup       
     
 class Guitarra (models.Model):
     forma = models.ForeignKey(Forma, on_delete=models.CASCADE)
@@ -38,5 +45,7 @@ class Guitarra (models.Model):
     tremolo = models.ForeignKey(Tremolo, on_delete=models.CASCADE)
     grup = models.ForeignKey(Grup, on_delete=models.CASCADE)
     estil = models.ForeignKey(Estil_musica, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='media',
+    imatge = models.ImageField(upload_to='media',
                               blank=True)
+                              
+                           
