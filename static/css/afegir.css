@@ -13,4 +13,9 @@ body{
 
 .formularis{
     padding:10px;
+    width:100%;
+}
+
+.boto{
+    width:100%;
 }

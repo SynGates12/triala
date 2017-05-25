@@ -1,0 +1,17 @@
+
+
+
+@media only screen and (min-width:900px){
+    .foto_grup{
+        width:15% !important;
+        margin:auto;
+    }
+}
+
+@media only screen and (max-width:899px){
+    .foto_grup{
+        width:50% !important;
+        margin:auto;
+    }
+    
+}

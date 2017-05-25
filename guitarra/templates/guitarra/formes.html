@@ -40,6 +40,16 @@
       
     <div id="container">
         
+        {% if llista_formes %}
+            <ul class="list-group">
+            {% for formes in llista_formes %}
+                 <a href="{% url "guitarra:n_cordes" formes.id %}"><li class="list-group-item">
+                   {{formes}}
+                </li></a>    
+            {%endfor%}
+        {% else %}
+            <div class="no_results">-No hi ha resultats-</div>
+        {% endif %}
         
         
     </div>    

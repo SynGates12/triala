@@ -1,14 +1,15 @@
 {% extends "base.html" %}
 
-    {% block title %} Triala Estils {% endblock %}
+    {% block title %} Guitarres Finals {% endblock %}
     
     {% block extra-head %}
     {% load static %}  
         <link href="{%static "css/global.css" %}" rel="stylesheet">
+        <link href="{%static "css/llista_grups.css" %}" rel="stylesheet">
     {% endblock %}
     
     {% block content %}
-    <nav class="navbar navbar-inverse">
+   <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -34,9 +35,24 @@
       </ul>
       
       </nav>
+      
+      
+      
     <div id="container">
+        
+        {% if list_guitarres %}
+            
+            {% for guit in list_guitarres %}
+                 <a href="{% url "guitarra:guitarra_informacio" guit.id %}">
+                   <div class="foto_grup col-md-2"> <img src="{%if guit.imatge %}{{guit.imatge.url}}{% endif%}"  class="img-responsive img-rounded image" ></div>
+                </a>    
+            {%endfor%}
+        {% else %}
+            <div class="no_results">-No hi ha resultats-</div>
+        {%endif%}
+        
         
         
         
     </div>    
-    {% endblock %}    
+    {% endblock %}

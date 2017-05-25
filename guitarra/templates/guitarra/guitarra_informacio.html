@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+    {% block title %} {{guitarra.nom_guitarra}} {% endblock %}
+    
+    {% block extra-head %}
+    <link rel="icon" href="{%if guitarra.logo %}{{guitarra.imatge.url}}{% endif%}" class="icon" type="image/png">
+    {% load static %}  
+        <link href="{%static "css/global.css" %}" rel="stylesheet">
+        <link href="{%static "css/grup_info.css" %}" rel="stylesheet">
+        <link href="{%static "css/guitarra_info.css" %}" rel="stylesheet">
+    {% endblock %}
+    
+    {% block content %}
+   <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand logoss" href="{% url "guitarra:index" %}">Triala.cat</a>
+          </div>
+          
+           <div id="navbar" class="navbar-collapse collapse">
+          
+                <ul class="nav navbar-nav navbar-right">
+                    {% if user.is_authenticated %}
+                    <div id="user">
+                      <ul class="nav navbar-nav navbar-right"> 
+                            <li><a href="{% url "usuaris:modificar_perfil"%}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ user }} </a></li></ul>
+                        <ul class="nav navbar-nav"> 
+                           <li><a href="{% url "usuaris:logout" %}"><span title="Logout" class="glyphicon glyphicon-off" aria-hidden="true"></span></a></li>
+                      </ul>     
+                    </div>
+                    {% else %}
+                    <div id="user">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="{% url "usuaris:login" %}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login</a></li>
+                        </ul>
+                    </div>
+                    {% endif %}
+              </ul>
+          </div>
+      
+      </nav>
+      </nav>
+      
+      
+      
+    <div id="container">
+        <a href="{% url "guitarra:guitarres" %}"><button type="button" class="btn btn-default enrere">Torna Enrere</button></a>
+        
+        <div id="grups">
+            
+               
+                    <div class="grup">
+                        <div class="noms">
+                            <div class="nom_guitar col-md-6"><h3><b>{{guitarra.nom_guitarra}}</b></h3></div>
+                            <div class="logo col-md-6"> <img src="{%if guitarra.logo %}{{guitarra.logo.url}}{% endif%}"  class="img-responsive logo_guitarra" ></div>
+                        </div>
+                        
+                        <div id="info">
+                            <div id="guit">
+                                <div class="image_guitar col-md-6"> 
+                                    <img src="{%if guitarra.imatge %}{{guitarra.imatge.url}}{% endif%}"  class="img-responsive img-rounded guittt" >
+                                </div>
+                                <div id="desc" class="col-md-6">
+                                    <div class="preu"><h2><b>{{guitarra.preu}} €</b></h2></div>
+                                    <div class="desc_guitar"><h4><p class="text-info">{{guitarra.descripcio_guitarra}}</p></h4></div>
+                                    <div class="color">Color: <h4>{{guitarra.color}}</h4></div>
+                                    <div class="cordes">Número de cordes: <h4>{{guitarra.n_cordes}}</h4></div>
+                                    <div clas="pastilles">Configuració de pastilles: <h4>{{guitarra.pastilles}}</h4></div>
+                                    <div class="fusta_c">Fusta del cos: <h4>{{guitarra.fusta_c}}</h4></div>
+                                    <div class="fusta_d">Fusta del diapasó: <h4>{{guitarra.fusta_d}}</h4></div>
+                                    <div class="pont">Tipus de pont: <h4>{{guitarra.tremolo}}</h4></div>
+                                </div>
+                            </div>
+                            
+                            <div id="art_est">
+                        <div id="artistes" class="col-md-6">
+                            <h4><small>Artistes Relacionats:</small></h4>
+                            {% for grupo in guitarra.grup.all %}
+                                <div class="grup col-md-3"><a href="/grup_informacio/{{grupo.id}}"><span class="label label-primary">{{grupo}}</span></a> </div>
+                            {% endfor %}
+                            
+                        </div>
+                        <div id="tipus" class="col-md-6">
+                            <h4><small>Estils Relacionats:</small></h4>
+                            {% for estilo in guitarra.estil.all %}
+                                <div class="estil col-md-3"><a href="/estil_informacio/{{estilo.id}}"><span class="label label-success">{{estilo}}</span></a> </div>
+                            {% endfor %}
+                            
+                        </div>
+                            
+                        </div>
+                        
+                        
+                        
+                        </div>
+                    </div>
+              
+            
+        </div>
+        
+        
+       
+        
+        
+    </div>    
+    {% endblock %}    

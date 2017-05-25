@@ -1,19 +1,22 @@
 .grup{
     display: flex;
     flex-direction:row;
+    flex-wrap:wrap;
+}
+
+.foto_grup{
+    margin:auto;
 }
 
 .nom_grup{
     display: flex;
     flex-direction:column;
     justify-content:center;
+    text-align:center;
+    margin:auto;
 }
 
-.guitarrista{
-    display: flex;
-    flex-direction:column;
-    justify-content:center;
-}
+
 
 li{
     background-color:#202020 !important;
@@ -21,4 +24,64 @@ li{
 
 li:hover{
     background-color:#333 !important;
+}
+
+#container{
+    border-radius:4px;
+}
+
+#end{
+    color:#333;
+    margin:auto;
+    text-align: center;
+    padding:10px;
+}
+
+a{
+    color:white;
+}
+
+a:hover{
+    color:skyblue;
+}
+
+
+
+
+
+
+@media only screen and (min-width:900px){
+    .guitarrista{
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        width:30%;
+        text-align:justify;
+        margin:auto;
+    
+    }
+    .image{
+        width:90%;
+    }
+}
+
+@media only screen and (max-width:899px){
+    .guitarrista{
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        width:80%;
+        text-align:justify;
+        margin:auto;
+    }
+    
+    #container{
+        padding:20px;
+        color:#333;
+        border-radius:4px;
+        color:white;
+        width:100% !important;
+        
+    }
+    
 }

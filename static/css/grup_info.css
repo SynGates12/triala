@@ -1,0 +1,119 @@
+
+#img{
+    width:500px !important;
+}
+
+
+.panel > .panel-heading {
+    background-image: none;
+    background-color: #202020;
+    color: white;
+    border-color:white;
+    
+}
+
+.panel{
+    border-color:white;
+    background:#333;
+    color:white;
+}
+
+.grupp{
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+
+}
+
+
+
+.info{
+    width:50% !important;
+}
+
+
+
+
+.enrere{
+    margin-bottom:20px;
+}
+
+.foto_guit{
+    padding-top:20px;
+    margin:auto;
+}
+
+.tit{
+    color:#333;
+}
+
+@media only screen and (min-width:900px){
+    
+    #container{
+        padding:20px;
+        color:#333;
+        border-radius:4px;
+        color:white;
+        
+    }
+
+    
+    .image_group{
+        width:50%;
+        margin:auto;
+        display:flex;
+        flex-direction:column ;
+        justify-content:center ;
+        align-items:center;
+    }
+    
+    .guitarrista{
+        width:45% !important;
+        margin:auto;
+        display:flex;
+        flex-direction:column ;
+        justify-content:center;
+        align-items:center;
+        margin-top:30px !important;
+        text-align:left !important;
+    
+    }
+    
+
+
+   
+}
+
+@media only screen and (max-width:899px){
+    
+    
+    #container{
+        padding:20px;
+        color:#333;
+        border-radius:4px;
+        color:white;
+        width:100% !important;
+        
+    }
+    
+    .image_group{
+        width:80%;
+        margin:auto;
+        display:flex;
+        flex-direction:column ;
+        justify-content:center ;
+        align-items:center;
+    }
+    
+    .guitarrista{
+        width:80%;
+        margin:auto;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        margin-top:20px !important;
+        text-align:left !important;
+    }
+    
+}

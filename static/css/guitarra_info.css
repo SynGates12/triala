@@ -1,0 +1,45 @@
+#grups{
+    color:#333 !important;
+}
+
+#noms{
+    display:flex;
+    flex-direction:row;
+}
+
+.logo_guitarra{
+    width:200px;
+    margin:auto;
+}
+
+.nom_guitar{
+    margin:auto;
+}
+
+.guittt{
+    margin:auto;
+}
+
+.desc_guitar{
+   
+    text-align:justify;
+}
+
+#art_est{
+    margin-top:30px;
+
+}
+
+#container{
+    width:60%;
+}
+
+#grups{
+    background:white;
+    border-radius:4px;
+    padding:10px;
+}
+
+h4{
+    margin-top:3px;
+}

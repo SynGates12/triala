@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+    {% block title %} Tipus de pont {% endblock %}
+    
+    {% block extra-head %}
+    {% load static %}  
+        <link href="{%static "css/global.css" %}" rel="stylesheet">
+        <link href="{%static "css/llista_grups.css" %}" rel="stylesheet">
+    {% endblock %}
+    
+    {% block content %}
+   <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="{% url "guitarra:index" %}">Triala.cat</a>
+          </div>
+          
+        <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+            <div id="user">
+              <ul class="nav navbar-nav"> 
+                    <li><a href="{% url "usuaris:modificar_perfil"%}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ user }} </a></li></ul>
+                <ul class="nav navbar-nav"> 
+                   <li><a href="{% url "usuaris:logout" %}"><span title="Logout" class="glyphicon glyphicon-off" aria-hidden="true"></span></a></li>
+              </ul>     
+            </div>
+            {% else %}
+            <div id="user">
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url "usuaris:login" %}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login</a></li>
+                </ul>
+            </div>
+            {% endif %}
+      </ul>
+      
+      </nav>
+      
+      
+      
+    <div id="container">
+        
+        {% if list_tremolo %}
+            <ul class="list-group">
+            {% for trem in list_tremolo %}
+                 <a href="{% url "guitarra:imatge_final" forma.id n_cordes.id fusta_c.id fusta_d.id pastilles_tremolo.id trem.id  %}"><li class="list-group-item">
+                   {{trem.tremolo}}
+                </li></a>    
+            {%endfor%}
+        {% else %}
+            <div class="no_results">-No hi ha resultats-</div>
+        {%endif%}
+        
+        
+        
+        
+    </div>    
+    {% endblock %}
