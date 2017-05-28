@@ -95,10 +95,34 @@ def tremolo(request, forma_id, n_cordes_id, fusta_c_id, fusta_d_id, pastilles_id
                                                         'list_tremolo':list_tremolo
                                                         })
     
+#def imatge_final(request, forma_id, n_cordes_id, fusta_c_id, fusta_d_id, pastilles_id, tremolo_id):
+#    guit = get_object_or_404(Tremolo,pk=tremolo_id)
+#    list_guitarres = guit.guitarra_set.all()
+#    return render (request, "guitarra/imatge_final.html", {'guit':guit, 'list_guitarres':list_guitarres})  
+
+
 def imatge_final(request, forma_id, n_cordes_id, fusta_c_id, fusta_d_id, pastilles_id, tremolo_id):
-    guit = get_object_or_404(Tremolo,pk=tremolo_id)
-    list_guitarres = guit.guitarra_set.all()
-    return render (request, "guitarra/imatge_final.html", {'guit':guit, 'list_guitarres':list_guitarres})  
+     forma = get_object_or_404(Forma,pk=forma_id)
+     n_cordes = get_object_or_404(N_cordes,pk=n_cordes_id)
+     fusta_c =  get_object_or_404(Fusta_c,pk=fusta_c_id)
+     fusta_d =  get_object_or_404(Fusta_d,pk=fusta_d_id)
+     pastilles_tremolo = get_object_or_404(Pastilles,pk=pastilles_id)
+     guit = get_object_or_404(Tremolo,pk=tremolo_id)
+     list_guitarres = guit.guitarra_set.all()
+     juano=get_object_or_404(Tremolo,pk=tremolo_id)
+     guitarra=Guitarra.objects.filter(forma=forma,
+                                      n_cordes=n_cordes,
+                                      fusta_c=fusta_c,
+                                      fusta_d=fusta_d,
+                                      pastilles=pastilles_tremolo,
+                                      tremolo=juano
+                                           )
+     list_guitarres=guitarra.values_list()
+     return render (request, "guitarra/imatge_final.html", {'juano':juano,'list_guitarres':list_guitarres, 'guitarra':guitarra})  
+
+
+
+
 
 
 def afegir_grup(request):

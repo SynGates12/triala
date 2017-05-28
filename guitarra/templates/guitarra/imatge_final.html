@@ -6,6 +6,7 @@
     {% load static %}  
         <link href="{%static "css/global.css" %}" rel="stylesheet">
         <link href="{%static "css/llista_grups.css" %}" rel="stylesheet">
+        <link href="{%static "css/llista_guitarres.css" %}" rel="stylesheet">
     {% endblock %}
     
     {% block content %}
@@ -40,12 +41,18 @@
       
     <div id="container">
         
-        {% if list_guitarres %}
-            
+          
+         {% if list_guitarres %}
+            <ul class="list-group">
             {% for guit in list_guitarres %}
-                 <a href="{% url "guitarra:guitarra_informacio" guit.id %}">
-                   <div class="foto_grup col-md-2"> <img src="{%if guit.imatge %}{{guit.imatge.url}}{% endif%}"  class="img-responsive img-rounded image" ></div>
-                </a>    
+                 <a href="{% url "guitarra:guitarra_informacio" guit.0 %}"><li class="list-group-item">
+                     <div class="grup">
+                       <div class="foto_grup col-md-4"><img src="{%if guit.11 %}/media/{{guit.11}}{% endif%}"  class="img-responsive img-rounded guitarra-f" ></div>
+                       <div class="nom_grup col-md-4">{{guit.1}}</div>
+                       <div class="guitarrista col-md-4">{{guit.2|truncatechars:150}}</div>
+                       
+                  </div>
+                </li></a>    
             {%endfor%}
         {% else %}
             <div class="no_results">-No hi ha resultats-</div>
