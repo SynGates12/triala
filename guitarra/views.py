@@ -221,4 +221,10 @@ def afegir_guitarra(request):
     
     return render (request, 'guitarra/afegir_guitarra.html', {'form_guitarra': form_guitarra} )
     
+    
+def llista_comentaris(request, guitarra_id):
+    guitarra = get_object_or_404(Guitarra,pk=guitarra_id)
+    comentari = guitarra.comentari_set.all()
+    return render(request,"guitarra/guitarra_informacio.html", {'guitarra': guitarra, 'comentari':comentari})     
+    
 

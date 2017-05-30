@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from usuaris import views
 
+
 app_name='usuaris'
 
 urlpatterns = [

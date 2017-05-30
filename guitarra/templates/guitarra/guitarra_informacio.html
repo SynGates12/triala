@@ -104,9 +104,55 @@
               
             
         </div>
-        
-        
+        <div id="form_comentari">
+            <form id="comentar" method ="post" action="">
        
+                         
+                        {% for field in form_comenta.visible_fields %}
+                              {% csrf_token %}
+            	              <div class="form-group">
+                                {{field.label_tag}}
+                  	            {{ field }}
+                  	            
+                  	            {% if field.help_text %}
+                  	            {% endif %}
+                  		        {% if field.errors %}		        	
+                  			        <div class="alert alert-danger">
+                  			        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                  				        <ul>
+                  				          {% for error in field.errors%}
+                  				          <li>{{ error }}</li>
+                  			              {% endfor %}
+                  			            </ul>
+                  		         	</div>
+                  		        {% endif %}
+                  	        </div>        
+                       {% endfor %}
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <br><br>
+              <input type="submit" class="formulari boto btn btn-primary" value="Envia">
+            </form>                
+            
+            <div id="comentaris">
+              
+                {% for coment in guitarra.comentari_set.all %}
+                    {{coment.text}}
+                   
+                {%endfor%}
+            
+        </div>
+            
+            
+            
+            
+            
+        </div>
         
         
     </div>    

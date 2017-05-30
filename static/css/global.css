@@ -6,6 +6,12 @@ body{
 }
 
 
+.tit{
+    width: 75%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
 #logo{
    width:10%;
    height:40px
@@ -102,10 +108,14 @@ a{
     color:#333;
 }
 
-.busca{
-    padding:20px;
+#busca-grup{
+    width:75%;
+    margin:auto;
 }
 
+.busca{
+    margin-left: -30px;
+}
 
 html{
     position: relative; 

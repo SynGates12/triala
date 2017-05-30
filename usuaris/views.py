@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404, redirect, render_to_response
-from .forms import LoginForm, nou_usuari_form, Comenta
+from .forms import LoginForm, nou_usuari_form
 from django.core.urlresolvers import reverse
 from django.forms import modelform_factory
-from .models import Perfil, Comentari
+from usuaris.models import Perfil, Comentari
 from guitarra.models import Forma, N_cordes, Fusta_c, Fusta_d, Pastilles, Tremolo, Grup, Estil_musica, Guitarra
 from django.db.models import Q
 from django.contrib.auth.models import User
@@ -114,3 +114,55 @@ def modificar_perfil(request):
     
     return render(request, 'modificar_perfil.html', {'formUsuari': formUsuari } )    
                                                      
+                                                     
+def comenta(request):
+    formulario_c = modelform_factory(model=Comentari, exclude=[''])
+   
+    if request.method == 'POST':
+        form_comenta = formulario_c(request.POST)
+        
+        if form_comenta.is_valid():
+            form_comenta.save()
+            messages.info(request, "Comentari afegit correctament")
+            return redirect ("guitarra:guitarra_informacio")
+            
+    else:
+        form_comenta = formulario_c()
+        
+    for f in form_comenta.fields:
+       form_comenta.fields[f].widget.attrs['class'] = 'form-group formularis'
+       
+    return render (request, 'guitarra/guitarra_informacio.html', {'form_comenta': form_comenta} )
+    
+    
+    
+#     usuari = Perfil.objects.get(id=perfil_id)
+    
+#     if request.method == 'POST':
+#         form_comenta = Comenta(request.POST)
+        
+#         if form_comenta.is_valid():
+#             text = form_comenta.cleaned_data['text']
+        
+#             form_comenta.save()
+#             Comentari.objects.create(text=text,
+#                                      usuari=usuari
+#                                     )
+                                    
+#             return redirect("guitarra:guitarra_informacio")    
+#     else:
+#         form_comenta= Comenta()
+    
+#     for f in form_comenta.fields:
+#         form_comenta.fields[f].widget.attrs['class'] = 'form-group formularis'
+        
+#     return render (request, 'guitarra/guitarra_informacio.html', {'form_comenta': form_comenta} )
+
+def llista_comentaris(request, guitarra_id):
+    guitarra = get_object_or_404(Guitarra,pk=guitarra_id)
+    comentari = guitarra.comentari_set.all()
+    return render(request,"guitarra/guitarra_informacio.html", {'guitarra': guitarra, 'comentari':comentari}) 
+    
+    
+    
+    

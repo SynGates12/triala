@@ -73,6 +73,7 @@ class Grup (models.Model):
                             
     def __str__(self):
         return self.nom_grup
+    
         
     
 class Guitarra (models.Model):

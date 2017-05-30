@@ -25,9 +25,9 @@ class nou_usuari_form(forms.Form):
                              widget=forms.PasswordInput(),
                             )
                             
-class Comenta(forms.Form):
-    text=forms.CharField(label="Comenta...",
-                        widget=forms.Textarea)
+# class Comenta(forms.Form):
+#     text=forms.CharField(label="Comenta...",
+#                         max_length=1000)
     
 
 class GrupForm(forms.Form):
@@ -35,3 +35,5 @@ class GrupForm(forms.Form):
                          max_length=300)
     descripcio=forms.CharField(label="Descripcio grup",
                                 max_length=1000)
+                                
+    
