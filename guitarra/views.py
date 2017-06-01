@@ -3,7 +3,7 @@ from django.shortcuts import render,get_object_or_404,redirect, render_to_respon
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse
 from guitarra.models import Forma, N_cordes, Fusta_c, Fusta_d, Pastilles, Tremolo, Grup, Estil_musica, Guitarra
-from guitarra.forms import nou_grup, nou_estil
+from guitarra.forms import nou_grup, nou_estil, ComentaForm
 from usuaris.models import Perfil, Comentari
 from django.forms import modelform_factory
 from django.db.models import Q
@@ -41,8 +41,30 @@ def guitarres(request):
     
 def guitarra_informacio(request, guitarra_id):
     guitarra = get_object_or_404(Guitarra,pk=guitarra_id)
-    ctx={'guitarra': guitarra}
-    return render(request,"guitarra/guitarra_informacio.html",ctx)    
+    
+    if request.user:
+        usuari=request.user
+    
+        if request.method == 'POST':
+            form = ComentaForm(request.POST)
+            if form.is_valid():
+                text = form.cleaned_data['text']
+                Comentari.objects.create (text = text, guitarra= guitarra, usuari = usuari.perfil)
+                messages.info(request, "Comentari afegit correctament")
+                return redirect(request.META['HTTP_REFERER'])
+        else:
+             form = ComentaForm()
+        
+        for f in form.fields:
+           form.fields[f].widget.attrs['class'] = 'form-control'
+    
+        comentari = guitarra.comentari_set.all()
+    # ctx={'guitarra': guitarra}
+    # return render(request,"guitarra/guitarra_informacio.html",ctx) s
+        return render (request, 'guitarra/guitarra_informacio.html', {'guitarra':guitarra,'form': form, 'comentari':comentari } )
+    
+    else:
+        return redirect ('login')    
     
 def formes(request):
     totes_formes = Forma.objects.all();
@@ -220,11 +242,6 @@ def afegir_guitarra(request):
     
     
     return render (request, 'guitarra/afegir_guitarra.html', {'form_guitarra': form_guitarra} )
-    
-    
-def llista_comentaris(request, guitarra_id):
-    guitarra = get_object_or_404(Guitarra,pk=guitarra_id)
-    comentari = guitarra.comentari_set.all()
-    return render(request,"guitarra/guitarra_informacio.html", {'guitarra': guitarra, 'comentari':comentari})     
+   
     
 

@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^', include('guitarra.urls')),
+     url(r'^', include('backup.urls', namespace='backup')),
     url(r'^Perfil/', include('usuaris.urls'))
     ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     

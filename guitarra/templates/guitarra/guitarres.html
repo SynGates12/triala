@@ -46,7 +46,9 @@
       
       </nav>
       
-      
+      {% if user.perfil.is_admin %}
+      <a href="{% url "backup:fer_backups" %}"><button type="button" class="btn btn-default enrere">Fes Backup</button></a>
+      {%endif%}
       
     <div id="container">
         <div id="grups">

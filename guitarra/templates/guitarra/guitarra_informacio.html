@@ -80,80 +80,56 @@
                             </div>
                             
                             <div id="art_est">
-                        <div id="artistes" class="col-md-6">
-                            <h4><small>Artistes Relacionats:</small></h4>
-                            {% for grupo in guitarra.grup.all %}
-                                <div class="grup col-md-3"><a href="/grup_informacio/{{grupo.id}}"><span class="label label-primary">{{grupo}}</span></a> </div>
-                            {% endfor %}
-                            
-                        </div>
-                        <div id="tipus" class="col-md-6">
-                            <h4><small>Estils Relacionats:</small></h4>
-                            {% for estilo in guitarra.estil.all %}
-                                <div class="estil col-md-3"><a href="/estil_informacio/{{estilo.id}}"><span class="label label-success">{{estilo}}</span></a> </div>
-                            {% endfor %}
-                            
-                        </div>
-                            
-                        </div>
-                        
-                        
-                        
+                                <div id="artistes" class="col-md-6">
+                                    <h4><small>Artistes Relacionats:</small></h4>
+                                    {% for grupo in guitarra.grup.all %}
+                                        <div class="grup col-md-3"><a href="/grup_informacio/{{grupo.id}}"><span class="label label-primary">{{grupo}}</span></a> </div>
+                                    {% endfor %}
+                                    
+                                </div>
+                                <div id="tipus" class="col-md-6">
+                                    <h4><small>Estils Relacionats:</small></h4>
+                                    {% for estilo in guitarra.estil.all %}
+                                        <div class="estil col-md-3"><a href="/estil_informacio/{{estilo.id}}"><span class="label label-success">{{estilo}}</span></a> </div>
+                                    {% endfor %}
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
-              
+            </div>
+           {% if user.is_authenticated %}
+            <div id="formulari_comenta">
+                <form action="" method="post"> {% csrf_token %}
+                   {% for field in form %}
+                                <div class="form-group">
+                        {{ field.label_tag }}: {{ field }}
+                    </div>
+                {% endfor %}
+	              
+             <input type="submit" class="formulari boto btn btn-primary" value="Envia">
+             </form>  
+                
+            </div>
+            <div="comentaris">
+                {% for com in comentari %}
+                    {{com.text}}
+                    {{com.data}}
+                    {{com.usuari.usuari}}
+                {% endfor %}    
+                
+                
+            </div>
+            {%else%}
+            -<a href="{% url "usuaris:login" %}">Entra</a> per comentar-
+            {%endif%}
             
-        </div>
-        <div id="form_comentari">
-            <form id="comentar" method ="post" action="">
-       
-                         
-                        {% for field in form_comenta.visible_fields %}
-                              {% csrf_token %}
-            	              <div class="form-group">
-                                {{field.label_tag}}
-                  	            {{ field }}
-                  	            
-                  	            {% if field.help_text %}
-                  	            {% endif %}
-                  		        {% if field.errors %}		        	
-                  			        <div class="alert alert-danger">
-                  			        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                  				        <ul>
-                  				          {% for error in field.errors%}
-                  				          <li>{{ error }}</li>
-                  			              {% endfor %}
-                  			            </ul>
-                  		         	</div>
-                  		        {% endif %}
-                  	        </div>        
-                       {% endfor %}
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <br><br>
-              <input type="submit" class="formulari boto btn btn-primary" value="Envia">
-            </form>                
+      </div>
             
-            <div id="comentaris">
-              
-                {% for coment in guitarra.comentari_set.all %}
-                    {{coment.text}}
-                   
-                {%endfor%}
-            
-        </div>
+          
             
             
-            
-            
-            
-        </div>
-        
-        
+
+          
     </div>    
     {% endblock %}    

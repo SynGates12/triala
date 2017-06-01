@@ -16,7 +16,6 @@ urlpatterns = [
     url(r'^estil_informacio/(?P<estil_id>\d+)$', views.estil_informacio, name="estil_informacio"),
     url(r'^grup_informacio/(?P<grup_id>\d+)$', views.grup_informacio, name="grup_informacio"),
     url(r'^guitarra_informacio/(?P<guitarra_id>\d+)$', views.guitarra_informacio, name="guitarra_informacio"),
-    url(r'^guitarra_informacio/(?P<guitarra_id>\d+)$', views.llista_comentaris, name="llista_comentaris"),
     url(r'^(?P<forma_id>\d+)/$', views.n_cordes, name="n_cordes"),
     url(r'^(?P<forma_id>\d+)/(?P<n_cordes_id>\d+)$', views.fusta_c, name="fusta_c"),
     url(r'^(?P<forma_id>\d+)/(?P<n_cordes_id>\d+)/(?P<fusta_c_id>\d+)$', views.fusta_d, name="fusta_d"),

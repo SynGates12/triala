@@ -23,6 +23,16 @@
           
            <div id="navbar" class="navbar-collapse collapse">
           
+            <ul class="nav navbar-nav navbar">
+                    {% if user.perfil.is_admin %}
+                     <li>hola que tal</li>
+                     
+                    
+                     
+                     
+                     
+                     {%endif%}
+                </ul>     
                 <ul class="nav navbar-nav navbar-right">
                     {% if user.is_authenticated %}
                     <div id="user">

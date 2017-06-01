@@ -18,3 +18,6 @@ class nou_estil (forms.Form):
     nom_estil = forms.CharField(max_length=120)
     descripcio_estil = forms.CharField(max_length=3000, widget=forms.Textarea)
     imatge = forms.ImageField(label='Selecciona un arxiu')
+    
+class ComentaForm(forms.Form):
+    text=forms.CharField(label="Comenta...",widget=forms.Textarea)

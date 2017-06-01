@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+  <object model="contenttypes.contenttype" pk="1">
+    <field name="app_label" type="CharField">admin</field>
+    <field name="model" type="CharField">logentry</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="2">
+    <field name="app_label" type="CharField">auth</field>
+    <field name="model" type="CharField">permission</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="3">
+    <field name="app_label" type="CharField">auth</field>
+    <field name="model" type="CharField">group</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="4">
+    <field name="app_label" type="CharField">auth</field>
+    <field name="model" type="CharField">user</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="5">
+    <field name="app_label" type="CharField">contenttypes</field>
+    <field name="model" type="CharField">contenttype</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="6">
+    <field name="app_label" type="CharField">sessions</field>
+    <field name="model" type="CharField">session</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="7">
+    <field name="app_label" type="CharField">guitarra</field>
+    <field name="model" type="CharField">forma</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="8">
+    <field name="app_label" type="CharField">guitarra</field>
+    <field name="model" type="CharField">n_cordes</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="9">
+    <field name="app_label" type="CharField">guitarra</field>
+    <field name="model" type="CharField">fusta_c</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="10">
+    <field name="app_label" type="CharField">guitarra</field>
+    <field name="model" type="CharField">fusta_d</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="11">
+    <field name="app_label" type="CharField">guitarra</field>
+    <field name="model" type="CharField">pastilles</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="12">
+    <field name="app_label" type="CharField">guitarra</field>
+    <field name="model" type="CharField">tremolo</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="13">
+    <field name="app_label" type="CharField">guitarra</field>
+    <field name="model" type="CharField">grup</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="14">
+    <field name="app_label" type="CharField">guitarra</field>
+    <field name="model" type="CharField">estil_musica</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="15">
+    <field name="app_label" type="CharField">guitarra</field>
+    <field name="model" type="CharField">guitarra</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="16">
+    <field name="app_label" type="CharField">usuaris</field>
+    <field name="model" type="CharField">perfil</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="17">
+    <field name="app_label" type="CharField">usuaris</field>
+    <field name="model" type="CharField">comentari</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="18">
+    <field name="app_label" type="CharField">guitarra</field>
+    <field name="model" type="CharField">color</field>
+  </object>
+  <object model="sessions.session" pk="0x5wpacmqyqqek8tbax3rl3xkr02cif9">
+    <field name="session_data" type="TextField">MTllNGEwNDI5NDk2MDI3NTI0ODEzYmZhM2Q4ZThmNGU2MzZmMjMxYjp7Il9hdXRoX3VzZXJfaGFzaCI6IjNlNzk2ZmM3MWEwN2I1NzVjZmFlZjFhZGIxNzhmMTdmYjM5OThhZTEiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIzIn0=</field>
+    <field name="expire_date" type="DateTimeField">2017-06-13T16:31:30.789686+00:00</field>
+  </object>
+  <object model="sessions.session" pk="dijq0azuhce9vhp06vnmlyjmmj7ohyyf">
+    <field name="session_data" type="TextField">OGZiM2YxYzZlZmE4ZjhmYzA4MjMxNzA2MjYzMjM4MTJlNmIwMDRlODp7Il9hdXRoX3VzZXJfaGFzaCI6IjA4MjczMjNlNGI5MGU2YzhhYmFhYzEwYmFjMmZhMTU0OTJmMWZkMzQiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIyIn0=</field>
+    <field name="expire_date" type="DateTimeField">2017-06-15T15:57:09.731262+00:00</field>
+  </object>
+  <object model="guitarra.forma" pk="64">
+    <field name="forma" type="CharField">Stratocaster</field>
+  </object>
+  <object model="guitarra.forma" pk="65">
+    <field name="forma" type="CharField">Les Paul</field>
+  </object>
+  <object model="guitarra.forma" pk="66">
+    <field name="forma" type="CharField">Telecaster</field>
+  </object>
+  <object model="guitarra.forma" pk="67">
+    <field name="forma" type="CharField">SG</field>
+  </object>
+  <object model="guitarra.forma" pk="68">
+    <field name="forma" type="CharField">ES</field>
+  </object>
+  <object model="guitarra.forma" pk="69">
+    <field name="forma" type="CharField">PRS</field>
+  </object>
+  <object model="guitarra.forma" pk="70">
+    <field name="forma" type="CharField">V</field>
+  </object>
+  <object model="guitarra.n_cordes" pk="37">
+    <field name="num" type="CharField">6</field>
+  </object>
+  <object model="guitarra.n_cordes" pk="38">
+    <field name="num" type="CharField">7</field>
+  </object>
+  <object model="guitarra.n_cordes" pk="39">
+    <field name="num" type="CharField">8</field>
+  </object>
+  <object model="guitarra.n_cordes" pk="40">
+    <field name="num" type="CharField">9</field>
+  </object>
+  <object model="guitarra.fusta_c" pk="73">
+    <field name="fusta_c" type="CharField">Vern</field>
+  </object>
+  <object model="guitarra.fusta_c" pk="74">
+    <field name="fusta_c" type="CharField">Caoba</field>
+  </object>
+  <object model="guitarra.fusta_c" pk="75">
+    <field name="fusta_c" type="CharField">Freixe</field>
+  </object>
+  <object model="guitarra.fusta_c" pk="76">
+    <field name="fusta_c" type="CharField">Freixe del Pantà</field>
+  </object>
+  <object model="guitarra.fusta_c" pk="77">
+    <field name="fusta_c" type="CharField">Korina</field>
+  </object>
+  <object model="guitarra.fusta_c" pk="78">
+    <field name="fusta_c" type="CharField">Tell</field>
+  </object>
+  <object model="guitarra.fusta_c" pk="79">
+    <field name="fusta_c" type="CharField">Auró</field>
+  </object>
+  <object model="guitarra.fusta_c" pk="80">
+    <field name="fusta_c" type="CharField">Altres</field>
+  </object>
+  <object model="guitarra.fusta_d" pk="49">
+    <field name="fusta_d" type="CharField">Banús</field>
+  </object>
+  <object model="guitarra.fusta_d" pk="50">
+    <field name="fusta_d" type="CharField">Caoba</field>
+  </object>
+  <object model="guitarra.fusta_d" pk="51">
+    <field name="fusta_d" type="CharField">Palissandre</field>
+  </object>
+  <object model="guitarra.fusta_d" pk="52">
+    <field name="fusta_d" type="CharField">Auró</field>
+  </object>
+  <object model="guitarra.fusta_d" pk="53">
+    <field name="fusta_d" type="CharField">Pau Ferro</field>
+  </object>
+  <object model="guitarra.fusta_d" pk="54">
+    <field name="fusta_d" type="CharField">Altres</field>
+  </object>
+  <object model="guitarra.pastilles" pk="67">
+    <field name="pastilles" type="CharField">SSS</field>
+  </object>
+  <object model="guitarra.pastilles" pk="68">
+    <field name="pastilles" type="CharField">SS</field>
+  </object>
+  <object model="guitarra.pastilles" pk="69">
+    <field name="pastilles" type="CharField">HSS</field>
+  </object>
+  <object model="guitarra.pastilles" pk="70">
+    <field name="pastilles" type="CharField">HSH</field>
+  </object>
+  <object model="guitarra.pastilles" pk="71">
+    <field name="pastilles" type="CharField">HH</field>
+  </object>
+  <object model="guitarra.pastilles" pk="72">
+    <field name="pastilles" type="CharField">H</field>
+  </object>
+  <object model="guitarra.pastilles" pk="73">
+    <field name="pastilles" type="CharField">P90 P90</field>
+  </object>
+  <object model="guitarra.pastilles" pk="74">
+    <field name="pastilles" type="CharField">P90 H</field>
+  </object>
+  <object model="guitarra.pastilles" pk="75">
+    <field name="pastilles" type="CharField">Altres</field>
+  </object>
+  <object model="guitarra.tremolo" pk="48">
+    <field name="tremolo" type="CharField">Wraparound</field>
+  </object>
+  <object model="guitarra.tremolo" pk="49">
+    <field name="tremolo" type="CharField">Ash Tray</field>
+  </object>
+  <object model="guitarra.tremolo" pk="50">
+    <field name="tremolo" type="CharField">Tune-o-Matic</field>
+  </object>
+  <object model="guitarra.tremolo" pk="51">
+    <field name="tremolo" type="CharField">2 Tek</field>
+  </object>
+  <object model="guitarra.tremolo" pk="52">
+    <field name="tremolo" type="CharField">Bigsby</field>
+  </object>
+  <object model="guitarra.tremolo" pk="53">
+    <field name="tremolo" type="CharField">Vintage</field>
+  </object>
+  <object model="guitarra.tremolo" pk="54">
+    <field name="tremolo" type="CharField">Wilkinson</field>
+  </object>
+  <object model="guitarra.tremolo" pk="55">
+    <field name="tremolo" type="CharField">Floyd Rose</field>
+  </object>
+  <object model="guitarra.tremolo" pk="56">
+    <field name="tremolo" type="CharField">Kahler</field>
+  </object>
+  <object model="guitarra.color" pk="137">
+    <field name="color" type="CharField">White</field>
+  </object>
+  <object model="guitarra.color" pk="138">
+    <field name="color" type="CharField">Black</field>
+  </object>
+  <object model="guitarra.color" pk="139">
+    <field name="color" type="CharField">Cherry</field>
+  </object>
+  <object model="guitarra.color" pk="140">
+    <field name="color" type="CharField">Red</field>
+  </object>
+  <object model="guitarra.color" pk="141">
+    <field name="color" type="CharField">Yellow</field>
+  </object>
+  <object model="guitarra.color" pk="142">
+    <field name="color" type="CharField">Blue</field>
+  </object>
+  <object model="guitarra.color" pk="143">
+    <field name="color" type="CharField">Green</field>
+  </object>
+  <object model="guitarra.color" pk="144">
+    <field name="color" type="CharField">Sunburst</field>
+  </object>
+  <object model="guitarra.color" pk="145">
+    <field name="color" type="CharField">Aged</field>
+  </object>
+  <object model="guitarra.color" pk="146">
+    <field name="color" type="CharField">Grey</field>
+  </object>
+  <object model="guitarra.color" pk="147">
+    <field name="color" type="CharField">Orange</field>
+  </object>
+  <object model="guitarra.color" pk="148">
+    <field name="color" type="CharField">Purple</field>
+  </object>
+  <object model="guitarra.color" pk="149">
+    <field name="color" type="CharField">Natural</field>
+  </object>
+  <object model="guitarra.color" pk="150">
+    <field name="color" type="CharField">Brown</field>
+  </object>
+  <object model="guitarra.color" pk="151">
+    <field name="color" type="CharField">Pink</field>
+  </object>
+  <object model="guitarra.color" pk="152">
+    <field name="color" type="CharField">Golden</field>
+  </object>
+  <object model="guitarra.color" pk="153">
+    <field name="color" type="CharField">Silver</field>
+  </object>
+  <object model="guitarra.color" pk="154">
+    <field name="color" type="CharField">Cream</field>
+  </object>
+  <object model="guitarra.color" pk="155">
+    <field name="color" type="CharField">Blonde</field>
+  </object>
+  <object model="guitarra.color" pk="156">
+    <field name="color" type="CharField">Design</field>
+  </object>
+  <object model="guitarra.estil_musica" pk="1">
+    <field name="nom_estil" type="CharField">Rock</field>
+    <field name="descripcio_estil" type="CharField">El rock es un término amplio que agrupa a una variedad de géneros musicales. Su forma originaria, conocida como rock and roll, surgió mayormente de la combinación de dos géneros anteriores como eran el rhythm and blues y el country. La música rock también se nutrió fuertemente del blues y el folk, e incorporó influencias del jazz, la música clásica y otras fuentes. El rock se ha centrado en la guitarra eléctrica, normalmente como parte de un grupo de rock con cantante, bajo, batería y, algunas veces, instrumentos de teclado como el órgano y el piano. Típicamente, el rock es una música centrada en las canciones, habitualmente con compás de 4/4 y usando una estructura verso-estribillo, pero el género se ha vuelto extremadamente diverso y las características musicales comunes son difíciles de definir. Como la música pop, las letras se centran a menudo en el amor romántico, pero también tratan un rango amplio de otros temas con un enfoque frecuente en lo social y lo político. El rock pone más énfasis en la composición, la actuación en vivo y la autenticidad que la música pop.</field>
+    <field name="imatge" type="FileField">media/rock.png</field>
+  </object>
+  <object model="guitarra.estil_musica" pk="2">
+    <field name="nom_estil" type="CharField">Heavy Metal</field>
+    <field name="descripcio_estil" type="CharField">El heavy metal, o simplemente metal —en español traducido literalmente como «metal pesado»— , es un género musical que nació a mediados de los años sesenta y principios de los setenta en el Reino Unido y en los Estados Unidos, cuyos orígenes provienen del blues rock, hard rock y del rock psicodélico. Se caracteriza principalmente por sus guitarras fuertes y distorsionadas, ritmos enfáticos, los sonidos del bajo y la batería son más densos de lo habitual y por voces generalmente agudas.</field>
+    <field name="imatge" type="FileField">media/metal.jpg</field>
+  </object>
+  <object model="guitarra.estil_musica" pk="3">
+    <field name="nom_estil" type="CharField">Pop</field>
+    <field name="descripcio_estil" type="CharField">La música pop (del inglés pop music, contracción de popular music) es un género de música popular que tuvo su origen a finales de los años 1950 como una derivación del tradicional pop, en combinación con otros géneros musicales que estaban de moda en aquel momento. Los términos música pop y música popular se usan a menudo de manera indistinta, aunque el segundo tiene un sentido más amplio al dar cabida a otros géneros distintos del pop que se consideren populares.
+
+Como género, la música pop es muy ecléctica, tomando prestado a menudo elementos de otros estilos como el urban, dance, el rock, la música latina, el rhythm and blues o el folk. Con todo, hay elementos esenciales que definen al pop, como son las canciones de corta a media duración, escritas en un formato básico (a menudo la estructura verso-estribillo), así como el uso habitual de estribillos repetidos, de temas melódicos y ganchos. La instrumentación se compone habitualmente de guitarra, batería, bajo, guitarra eléctrica, teclado, sintetizador, etcétera.</field>
+    <field name="imatge" type="FileField">media/pop.jpg</field>
+  </object>
+  <object model="guitarra.estil_musica" pk="4">
+    <field name="nom_estil" type="CharField">Rock'n'Roll</field>
+    <field name="descripcio_estil" type="CharField">El rock and roll (también rock 'n' roll o rock &amp; roll), en español rocanrol, es un género musical de ritmo marcado, derivado de una mezcla de diversos géneros música folclórica estadounidense, (doo wop, rhythm and blues, hillbilly, blues, country y western son los más destacados) y popularizado desde los década de 1950. El cantante más representativo fue Elvis Presley; su guitarrista más influyente, Chuck Berry; su pianista más importante, Jerry Lee Lewis y sus bandas más representativas, Eddie Cochran, Little Richard, Buddy Holly y Bill Haley and The Comets, entre otros. La expresión rock and roll ya venía utilizándose en las letras del rhythm and blues desde finales de la década de 1930, pero fue el DJ estadounidense Alan Freed quien comenzó a utilizarla para describir el estilo.</field>
+    <field name="imatge" type="FileField">media/rocknroll.jpg</field>
+  </object>
+  <object model="guitarra.estil_musica" pk="5">
+    <field name="nom_estil" type="CharField">Hard Rock</field>
+    <field name="descripcio_estil" type="CharField">Algunos de sus principales exponentes son o fueron Deep Purple, Blue Cheer, Def Leppard, The Who, AC/DC, Queen, Aerosmith, The Rolling Stones, Led Zeppelin, Uriah Heep, Black Sabbath, Guns N' Roses,KISS entre otros.
+
+Dentro de sus orígenes e influencias se pueden mencionar estilos y géneros tan variados como el rock and roll clásico, el blues rock, el garage rock, el rock psicodélico y la música folk pero, desde diferentes puntos de vista, fue eliminando elementos externos y se constituyó como identidad propia. El término hard rock abarca normalmente a los derivados y subgéneros de rock más pesados y rudos que el tradicional, entre los cuales se puede mencionar al heavy metal, el grunge, el glam metal, el rock sureño, el stoner rock, el punk rock o incluso el AOR, entre otros, a los cuales se puede considerar como subgéneros comprendidos dentro del hard rock, o géneros derivados del mismo.</field>
+    <field name="imatge" type="FileField">media/hardrock.jpg</field>
+  </object>
+  <object model="guitarra.estil_musica" pk="6">
+    <field name="nom_estil" type="CharField">Blues</field>
+    <field name="descripcio_estil" type="CharField">El blues (cuyo significado es melancolía o tristeza) es un género musical vocal e instrumental, basado en la utilización de notas de blues y de un patrón repetitivo, que suele seguir una estructura de doce compases. Originario de las comunidades afroamericanas del sur en los Estados Unidos a principios del siglo XX; para los años sesenta este género se convierte en una de las influencias más importantes para el desarrollo de la música popular estadounidense y occidental, llegando a formar parte de géneros musicales como el ragtime, jazz, bluegrass, rhythm and blues, rock and roll, funk, heavy metal, hip-hop, música country y pop.</field>
+    <field name="imatge" type="FileField">media/blues.jpg</field>
+  </object>
+  <object model="guitarra.grup" pk="3">
+    <field name="nom_grup" type="CharField">Pink Floyd</field>
+    <field name="descripcio_grup" type="CharField">Pink Floyd fue una banda de rock británica, considerada un icono cultural del siglo xx y una de las bandas más influyentes en la historia de la música, que obtuvo gran popularidad gracias a su música psicodélica que evolucionó hacia el rock progresivo con el paso del tiempo. Es conocida por sus canciones de alto contenido filosófico, la experimentación sónica, las innovadoras portadas de sus discos y sus elaborados espectáculos en vivo. Sus ventas sobrepasan los más de 300 millones de álbumes vendidos en todo el mundo, 97,5 de ellos solamente en los Estados Unidos.</field>
+    <field name="imatge" type="FileField">media/pink_UHZ00M6.jpg</field>
+  </object>
+  <object model="guitarra.grup" pk="4">
+    <field name="nom_grup" type="CharField">Jimi Hendrix</field>
+    <field name="descripcio_grup" type="CharField">James Marshall «Jimi» Hendrix (nacido Johnny Allen Hendrix, 27 de noviembre de 1942 - 18 de septiembre de 1970) fue un guitarrista, cantante y compositor estadounidense. A pesar de que su carrera solo duró cuatro años, se le considera uno de los guitarristas más influyentes de la historia del rock y uno de los músicos más famosos del siglo XX. El Salón de la Fama del Rock and Roll le describe como «indiscutiblemente el músico más grande de la historia del rock».</field>
+    <field name="imatge" type="FileField">media/jimi-hendrix.jpg</field>
+  </object>
+  <object model="guitarra.grup" pk="5">
+    <field name="nom_grup" type="CharField">Carlos Santana</field>
+    <field name="descripcio_grup" type="CharField">Carlos Humberto Santana Barragán (Speaker Icon.svg escuchar) (Autlán de Navarro, Jalisco, México, 20 de julio de 1947), es un guitarrista mexicano-estadounidense de rock, ganador de varios premios Grammy. Es considerado el 20º mejor guitarrista de todos los tiempos,1 según la revista Rolling Stone. Santana ha vendido más de 90 millones de álbumes en todo el mundo contando las ventas con su antigua banda y su carrera en solitario. Está casado con Cindy Blackman, conocida por ser baterista de Lenny Kravitz. Su hermano, Jorge Santana, también es músico, fue fundador del grupo Malo con quién tuvo el éxito "Suavecito" y tocó con la Fania All-Stars, y también toca la guitarra.</field>
+    <field name="imatge" type="FileField">media/santana.jpeg</field>
+  </object>
+  <object model="guitarra.grup" pk="6">
+    <field name="nom_grup" type="CharField">The Eagles</field>
+    <field name="descripcio_grup" type="CharField">Eagles fue una banda estadounidense de country rock y folk rock formada en Los Ángeles, California, EE.UU., en 1971, hasta el 2016, en que finalizó la carrera de la banda, con la muerte de uno de los fundadores y su vocalista Glenn Frey.
+Inicialmente su música era una mezcla entre country e instrumentación bluegrass con armonías de surf rock californiano. El resultado fueron baladas sensibles y música con cierto toque country y pop rock. Sus letras hablaban de coches, relaciones y vidas sin rumbo. Los inventores de este género fueron cantautores como Gram Parsons, Jackson Browne, J.D. Souther y Warren Zevon.</field>
+    <field name="imatge" type="FileField">media/eagles.jpg</field>
+  </object>
+  <object model="guitarra.grup" pk="7">
+    <field name="nom_grup" type="CharField">Led Zeppelin</field>
+    <field name="descripcio_grup" type="CharField">Led Zeppelin fue un grupo británico de hard rock fundado en 1968 por el guitarrista Jimmy Page, quien había pertenecido a The Yardbirds, al incluir en su formación a John Paul Jones como bajista y teclista, al vocalista Robert Plant y a John Bonham a la batería (que había coincidido con Plant en The Band of Joy).
+Led Zeppelin presentó elementos de un amplio espectro de influencias, como el blues, el rock and roll, el soul, la música celta, la música india, el folk, e incluso el country.</field>
+    <field name="imatge" type="FileField">media/ledzeppelin.jpg</field>
+  </object>
+  <object model="guitarra.grup" pk="8">
+    <field name="nom_grup" type="CharField">Eric Clapton</field>
+    <field name="descripcio_grup" type="CharField">Eric Patrick Clapton, CBE (Ripley, Surrey, Inglaterra, 30 de marzo de 1945) es un guitarrista, cantante y compositor de rock y blues británico, conocido por su magistral habilidad con la guitarra eléctrica, en concreto con su Stratocaster. Es conocido por el apodo de Slowhand ("Mano lenta"), desde su época en The Yardbirds y con el de God ("Dios") en su época con Cream. Clapton es miembro del Salón de la Fama del Rock por partida triple: como miembro de The Yardbirds y de Cream y por su carrera en solitario. En opinión de muchos críticos, Clapton ha sido uno de los artistas de la cultura de masas más respetados e influyentes de todos los tiempos.3 Aparece en el puesto número 2 de la lista "Los 100 guitarristas más grandes de todos los tiempos" de la revista Rolling Stone4 y en el puesto número 55 de su especial "Inmortales: Los 100 artistas más grandes de todos los tiempos"</field>
+    <field name="imatge" type="FileField">media/clapton.jpg</field>
+  </object>
+  <object model="guitarra.grup" pk="9">
+    <field name="nom_grup" type="CharField">B.B. King</field>
+    <field name="descripcio_grup" type="CharField">Riley B. Kinga o Riley Ben King (Itta Bena, Misisipi, 16 de septiembre de 1925-Las Vegas, Nevada, 14 de mayo de 20154 ), más conocido como B.B. King, fue un músico, cantante y compositor estadounidense.
+
+Es ampliamente considerado uno de los músicos de blues más influyentes de todos los tiempos, ganando el apodo de «Rey del Blues» y el renombre de «uno de los tres reyes (kings) de la guitarra blues» junto a Albert King y Freddie King. Según Edward M. Komara, King «introdujo un sofisticado estilo de solos basados en fluidas cuerdas [de guitarra] dobladas y brillantes vibratos que influirían prácticamente a todos los guitarristas de blues eléctrico que le siguieron».Los Beatles le mencionaron en la canción «Dig It» (1970).9 Además, la revista Rolling Stone lo situó en el puesto seis de la lista de los 100 mejores guitarristas de todos los tiempos10 y figura en el puesto 17 de la lista «Top 50 Guitarists of All Time» elaborada por Gibson.</field>
+    <field name="imatge" type="FileField">media/bbking.jpg</field>
+  </object>
+  <object model="guitarra.grup" pk="10">
+    <field name="nom_grup" type="CharField">The Rolling Stones</field>
+    <field name="descripcio_grup" type="CharField">The Rolling Stones es una banda británica de rock originaria de Londres. La banda se fundó en abril de 19622 por Brian Jones, Mick Jagger, Keith Richards, Bill Wyman, Ian Stewart y Charlie Watts. Brian Jones fue despedido en junio de 1969, falleciendo tres semanas después, siendo reemplazado por el guitarrista Mick Taylor, que dejaría el grupo en 1975 y sería a su vez reemplazado por Ron Wood. Con el retiro de Bill Wyman en 1993 se incluyó al bajista Darryl Jones que, aunque toca con la banda desde la grabación del álbum Voodoo Lounge en 1994, no es un miembro oficial.</field>
+    <field name="imatge" type="FileField">media/rolling.jpg</field>
+  </object>
+  <object model="guitarra.guitarra" pk="11">
+    <field name="nom_guitarra" type="CharField">Fender FSR STD STRAT MN BLK</field>
+    <field name="descripcio_guitarra" type="CharField">Guitarra eléctrica de edición especial Fender FSR Standard Stratocaster, con características especiales como su diapasón de arce de radio compuesto y 21 trastes medium jumbo</field>
+    <field name="preu" type="IntegerField">789</field>
+    <field name="color" rel="ManyToOneRel" to="guitarra.color">138</field>
+    <field name="forma" rel="ManyToOneRel" to="guitarra.forma">64</field>
+    <field name="n_cordes" rel="ManyToOneRel" to="guitarra.n_cordes">37</field>
+    <field name="fusta_c" rel="ManyToOneRel" to="guitarra.fusta_c">73</field>
+    <field name="fusta_d" rel="ManyToOneRel" to="guitarra.fusta_d">52</field>
+    <field name="pastilles" rel="ManyToOneRel" to="guitarra.pastilles">67</field>
+    <field name="tremolo" rel="ManyToOneRel" to="guitarra.tremolo">53</field>
+    <field name="imatge" type="FileField">media/fenderfsr.jpg</field>
+    <field name="logo" type="FileField">media/fenderLogo.png</field>
+    <field name="grup" rel="ManyToManyRel" to="guitarra.grup"><object pk="3"></object><object pk="4"></object><object pk="8"></object></field>
+    <field name="estil" rel="ManyToManyRel" to="guitarra.estil_musica"><object pk="1"></object><object pk="3"></object><object pk="4"></object><object pk="5"></object></field>
+  </object>
+  <object model="guitarra.guitarra" pk="12">
+    <field name="nom_guitarra" type="CharField">Gibson Les Paul Standard 2016 T TB</field>
+    <field name="descripcio_guitarra" type="CharField">Les Paul</field>
+    <field name="preu" type="IntegerField">1000</field>
+    <field name="color" rel="ManyToOneRel" to="guitarra.color">144</field>
+    <field name="forma" rel="ManyToOneRel" to="guitarra.forma">65</field>
+    <field name="n_cordes" rel="ManyToOneRel" to="guitarra.n_cordes">37</field>
+    <field name="fusta_c" rel="ManyToOneRel" to="guitarra.fusta_c">74</field>
+    <field name="fusta_d" rel="ManyToOneRel" to="guitarra.fusta_d">51</field>
+    <field name="pastilles" rel="ManyToOneRel" to="guitarra.pastilles">71</field>
+    <field name="tremolo" rel="ManyToOneRel" to="guitarra.tremolo">50</field>
+    <field name="imatge" type="FileField">media/lespaul.jpg</field>
+    <field name="logo" type="FileField">media/gibson.png</field>
+    <field name="grup" rel="ManyToManyRel" to="guitarra.grup"><object pk="5"></object><object pk="6"></object><object pk="7"></object></field>
+    <field name="estil" rel="ManyToManyRel" to="guitarra.estil_musica"><object pk="1"></object><object pk="2"></object><object pk="4"></object><object pk="5"></object><object pk="6"></object></field>
+  </object>
+  <object model="guitarra.guitarra" pk="13">
+    <field name="nom_guitarra" type="CharField">Fender Prova</field>
+    <field name="descripcio_guitarra" type="CharField">Guitarra eléctrica de edición especial Fender FSR Standard Stratocaster, con características especiales como su diapasón de arce de radio compuesto y 21 trastes medium jumbo</field>
+    <field name="preu" type="IntegerField">789</field>
+    <field name="color" rel="ManyToOneRel" to="guitarra.color">138</field>
+    <field name="forma" rel="ManyToOneRel" to="guitarra.forma">64</field>
+    <field name="n_cordes" rel="ManyToOneRel" to="guitarra.n_cordes">37</field>
+    <field name="fusta_c" rel="ManyToOneRel" to="guitarra.fusta_c">73</field>
+    <field name="fusta_d" rel="ManyToOneRel" to="guitarra.fusta_d">52</field>
+    <field name="pastilles" rel="ManyToOneRel" to="guitarra.pastilles">67</field>
+    <field name="tremolo" rel="ManyToOneRel" to="guitarra.tremolo">53</field>
+    <field name="imatge" type="FileField">media/fenderfsr_rB1fuTK.jpg</field>
+    <field name="logo" type="FileField">media/fenderLogo_d6Prdmj.png</field>
+    <field name="grup" rel="ManyToManyRel" to="guitarra.grup"><object pk="3"></object><object pk="4"></object><object pk="8"></object></field>
+    <field name="estil" rel="ManyToManyRel" to="guitarra.estil_musica"><object pk="1"></object><object pk="3"></object><object pk="4"></object><object pk="5"></object></field>
+  </object>
+  <object model="guitarra.guitarra" pk="14">
+    <field name="nom_guitarra" type="CharField">guitarra 7 cordes</field>
+    <field name="descripcio_guitarra" type="CharField">guitarra  de 7 cordes</field>
+    <field name="preu" type="IntegerField">777</field>
+    <field name="color" rel="ManyToOneRel" to="guitarra.color">147</field>
+    <field name="forma" rel="ManyToOneRel" to="guitarra.forma">64</field>
+    <field name="n_cordes" rel="ManyToOneRel" to="guitarra.n_cordes">38</field>
+    <field name="fusta_c" rel="ManyToOneRel" to="guitarra.fusta_c">76</field>
+    <field name="fusta_d" rel="ManyToOneRel" to="guitarra.fusta_d">53</field>
+    <field name="pastilles" rel="ManyToOneRel" to="guitarra.pastilles">69</field>
+    <field name="tremolo" rel="ManyToOneRel" to="guitarra.tremolo">55</field>
+    <field name="imatge" type="FileField">media/stratocaster.png</field>
+    <field name="logo" type="FileField">media/7cordesjpg</field>
+    <field name="grup" rel="ManyToManyRel" to="guitarra.grup"><object pk="7"></object></field>
+    <field name="estil" rel="ManyToManyRel" to="guitarra.estil_musica"><object pk="2"></object><object pk="5"></object></field>
+  </object>
+  <object model="usuaris.comentari" pk="1">
+    <field name="data" type="DateField">2017-05-30</field>
+    <field name="text" type="CharField">hola</field>
+    <field name="guitarra" rel="ManyToOneRel" to="guitarra.guitarra">11</field>
+    <field name="usuari" rel="ManyToOneRel" to="usuaris.perfil">2</field>
+  </object>
+  <object model="auth.permission" pk="1">
+    <field name="name" type="CharField">Can add log entry</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">1</field>
+    <field name="codename" type="CharField">add_logentry</field>
+  </object>
+  <object model="auth.permission" pk="2">
+    <field name="name" type="CharField">Can change log entry</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">1</field>
+    <field name="codename" type="CharField">change_logentry</field>
+  </object>
+  <object model="auth.permission" pk="3">
+    <field name="name" type="CharField">Can delete log entry</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">1</field>
+    <field name="codename" type="CharField">delete_logentry</field>
+  </object>
+  <object model="auth.permission" pk="4">
+    <field name="name" type="CharField">Can add permission</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">2</field>
+    <field name="codename" type="CharField">add_permission</field>
+  </object>
+  <object model="auth.permission" pk="5">
+    <field name="name" type="CharField">Can change permission</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">2</field>
+    <field name="codename" type="CharField">change_permission</field>
+  </object>
+  <object model="auth.permission" pk="6">
+    <field name="name" type="CharField">Can delete permission</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">2</field>
+    <field name="codename" type="CharField">delete_permission</field>
+  </object>
+  <object model="auth.permission" pk="7">
+    <field name="name" type="CharField">Can add group</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">3</field>
+    <field name="codename" type="CharField">add_group</field>
+  </object>
+  <object model="auth.permission" pk="8">
+    <field name="name" type="CharField">Can change group</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">3</field>
+    <field name="codename" type="CharField">change_group</field>
+  </object>
+  <object model="auth.permission" pk="9">
+    <field name="name" type="CharField">Can delete group</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">3</field>
+    <field name="codename" type="CharField">delete_group</field>
+  </object>
+  <object model="auth.permission" pk="10">
+    <field name="name" type="CharField">Can add user</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">4</field>
+    <field name="codename" type="CharField">add_user</field>
+  </object>
+  <object model="auth.permission" pk="11">
+    <field name="name" type="CharField">Can change user</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">4</field>
+    <field name="codename" type="CharField">change_user</field>
+  </object>
+  <object model="auth.permission" pk="12">
+    <field name="name" type="CharField">Can delete user</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">4</field>
+    <field name="codename" type="CharField">delete_user</field>
+  </object>
+  <object model="auth.permission" pk="13">
+    <field name="name" type="CharField">Can add content type</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">5</field>
+    <field name="codename" type="CharField">add_contenttype</field>
+  </object>
+  <object model="auth.permission" pk="14">
+    <field name="name" type="CharField">Can change content type</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">5</field>
+    <field name="codename" type="CharField">change_contenttype</field>
+  </object>
+  <object model="auth.permission" pk="15">
+    <field name="name" type="CharField">Can delete content type</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">5</field>
+    <field name="codename" type="CharField">delete_contenttype</field>
+  </object>
+  <object model="auth.permission" pk="16">
+    <field name="name" type="CharField">Can add session</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">6</field>
+    <field name="codename" type="CharField">add_session</field>
+  </object>
+  <object model="auth.permission" pk="17">
+    <field name="name" type="CharField">Can change session</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">6</field>
+    <field name="codename" type="CharField">change_session</field>
+  </object>
+  <object model="auth.permission" pk="18">
+    <field name="name" type="CharField">Can delete session</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">6</field>
+    <field name="codename" type="CharField">delete_session</field>
+  </object>
+  <object model="auth.permission" pk="19">
+    <field name="name" type="CharField">Can add forma</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">7</field>
+    <field name="codename" type="CharField">add_forma</field>
+  </object>
+  <object model="auth.permission" pk="20">
+    <field name="name" type="CharField">Can change forma</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">7</field>
+    <field name="codename" type="CharField">change_forma</field>
+  </object>
+  <object model="auth.permission" pk="21">
+    <field name="name" type="CharField">Can delete forma</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">7</field>
+    <field name="codename" type="CharField">delete_forma</field>
+  </object>
+  <object model="auth.permission" pk="22">
+    <field name="name" type="CharField">Can add n_cordes</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="codename" type="CharField">add_n_cordes</field>
+  </object>
+  <object model="auth.permission" pk="23">
+    <field name="name" type="CharField">Can change n_cordes</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="codename" type="CharField">change_n_cordes</field>
+  </object>
+  <object model="auth.permission" pk="24">
+    <field name="name" type="CharField">Can delete n_cordes</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="codename" type="CharField">delete_n_cordes</field>
+  </object>
+  <object model="auth.permission" pk="25">
+    <field name="name" type="CharField">Can add fusta_c</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">9</field>
+    <field name="codename" type="CharField">add_fusta_c</field>
+  </object>
+  <object model="auth.permission" pk="26">
+    <field name="name" type="CharField">Can change fusta_c</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">9</field>
+    <field name="codename" type="CharField">change_fusta_c</field>
+  </object>
+  <object model="auth.permission" pk="27">
+    <field name="name" type="CharField">Can delete fusta_c</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">9</field>
+    <field name="codename" type="CharField">delete_fusta_c</field>
+  </object>
+  <object model="auth.permission" pk="28">
+    <field name="name" type="CharField">Can add fusta_d</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">10</field>
+    <field name="codename" type="CharField">add_fusta_d</field>
+  </object>
+  <object model="auth.permission" pk="29">
+    <field name="name" type="CharField">Can change fusta_d</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">10</field>
+    <field name="codename" type="CharField">change_fusta_d</field>
+  </object>
+  <object model="auth.permission" pk="30">
+    <field name="name" type="CharField">Can delete fusta_d</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">10</field>
+    <field name="codename" type="CharField">delete_fusta_d</field>
+  </object>
+  <object model="auth.permission" pk="31">
+    <field name="name" type="CharField">Can add pastilles</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="codename" type="CharField">add_pastilles</field>
+  </object>
+  <object model="auth.permission" pk="32">
+    <field name="name" type="CharField">Can change pastilles</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="codename" type="CharField">change_pastilles</field>
+  </object>
+  <object model="auth.permission" pk="33">
+    <field name="name" type="CharField">Can delete pastilles</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="codename" type="CharField">delete_pastilles</field>
+  </object>
+  <object model="auth.permission" pk="34">
+    <field name="name" type="CharField">Can add tremolo</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">12</field>
+    <field name="codename" type="CharField">add_tremolo</field>
+  </object>
+  <object model="auth.permission" pk="35">
+    <field name="name" type="CharField">Can change tremolo</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">12</field>
+    <field name="codename" type="CharField">change_tremolo</field>
+  </object>
+  <object model="auth.permission" pk="36">
+    <field name="name" type="CharField">Can delete tremolo</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">12</field>
+    <field name="codename" type="CharField">delete_tremolo</field>
+  </object>
+  <object model="auth.permission" pk="37">
+    <field name="name" type="CharField">Can add grup</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">13</field>
+    <field name="codename" type="CharField">add_grup</field>
+  </object>
+  <object model="auth.permission" pk="38">
+    <field name="name" type="CharField">Can change grup</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">13</field>
+    <field name="codename" type="CharField">change_grup</field>
+  </object>
+  <object model="auth.permission" pk="39">
+    <field name="name" type="CharField">Can delete grup</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">13</field>
+    <field name="codename" type="CharField">delete_grup</field>
+  </object>
+  <object model="auth.permission" pk="40">
+    <field name="name" type="CharField">Can add estil_musica</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">14</field>
+    <field name="codename" type="CharField">add_estil_musica</field>
+  </object>
+  <object model="auth.permission" pk="41">
+    <field name="name" type="CharField">Can change estil_musica</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">14</field>
+    <field name="codename" type="CharField">change_estil_musica</field>
+  </object>
+  <object model="auth.permission" pk="42">
+    <field name="name" type="CharField">Can delete estil_musica</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">14</field>
+    <field name="codename" type="CharField">delete_estil_musica</field>
+  </object>
+  <object model="auth.permission" pk="43">
+    <field name="name" type="CharField">Can add guitarra</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">15</field>
+    <field name="codename" type="CharField">add_guitarra</field>
+  </object>
+  <object model="auth.permission" pk="44">
+    <field name="name" type="CharField">Can change guitarra</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">15</field>
+    <field name="codename" type="CharField">change_guitarra</field>
+  </object>
+  <object model="auth.permission" pk="45">
+    <field name="name" type="CharField">Can delete guitarra</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">15</field>
+    <field name="codename" type="CharField">delete_guitarra</field>
+  </object>
+  <object model="auth.permission" pk="46">
+    <field name="name" type="CharField">Can add perfil</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">16</field>
+    <field name="codename" type="CharField">add_perfil</field>
+  </object>
+  <object model="auth.permission" pk="47">
+    <field name="name" type="CharField">Can change perfil</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">16</field>
+    <field name="codename" type="CharField">change_perfil</field>
+  </object>
+  <object model="auth.permission" pk="48">
+    <field name="name" type="CharField">Can delete perfil</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">16</field>
+    <field name="codename" type="CharField">delete_perfil</field>
+  </object>
+  <object model="auth.permission" pk="49">
+    <field name="name" type="CharField">Can add comentari</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">17</field>
+    <field name="codename" type="CharField">add_comentari</field>
+  </object>
+  <object model="auth.permission" pk="50">
+    <field name="name" type="CharField">Can change comentari</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">17</field>
+    <field name="codename" type="CharField">change_comentari</field>
+  </object>
+  <object model="auth.permission" pk="51">
+    <field name="name" type="CharField">Can delete comentari</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">17</field>
+    <field name="codename" type="CharField">delete_comentari</field>
+  </object>
+  <object model="auth.permission" pk="52">
+    <field name="name" type="CharField">Can add color</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">18</field>
+    <field name="codename" type="CharField">add_color</field>
+  </object>
+  <object model="auth.permission" pk="53">
+    <field name="name" type="CharField">Can change color</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">18</field>
+    <field name="codename" type="CharField">change_color</field>
+  </object>
+  <object model="auth.permission" pk="54">
+    <field name="name" type="CharField">Can delete color</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">18</field>
+    <field name="codename" type="CharField">delete_color</field>
+  </object>
+  <object model="auth.user" pk="1">
+    <field name="password" type="CharField">pbkdf2_sha256$24000$m71EanqJfnv2$h6xw+GgX7TCW0ZCTNf68NoeGt30Hk4+6dSxkT0mMGyc=</field>
+    <field name="last_login" type="DateTimeField">2017-05-30T16:30:52.706335+00:00</field>
+    <field name="is_superuser" type="BooleanField">False</field>
+    <field name="username" type="CharField">ojulia14@gmail.com</field>
+    <field name="first_name" type="CharField"></field>
+    <field name="last_name" type="CharField"></field>
+    <field name="email" type="CharField">ojulia14@gmail.com</field>
+    <field name="is_staff" type="BooleanField">False</field>
+    <field name="is_active" type="BooleanField">True</field>
+    <field name="date_joined" type="DateTimeField">2017-05-08T15:32:06.509009+00:00</field>
+    <field name="groups" rel="ManyToManyRel" to="auth.group"></field>
+    <field name="user_permissions" rel="ManyToManyRel" to="auth.permission"></field>
+  </object>
+  <object model="auth.user" pk="2">
+    <field name="password" type="CharField">pbkdf2_sha256$24000$ajguYQXm4tkO$WtfZTMuVa6NNKGZypp22pZ+8vC9y4gPXQbCjHYAClBw=</field>
+    <field name="last_login" type="DateTimeField">2017-06-01T15:57:09.713424+00:00</field>
+    <field name="is_superuser" type="BooleanField">False</field>
+    <field name="username" type="CharField">admin@triala.cat</field>
+    <field name="first_name" type="CharField"></field>
+    <field name="last_name" type="CharField"></field>
+    <field name="email" type="CharField">admin@triala.cat</field>
+    <field name="is_staff" type="BooleanField">False</field>
+    <field name="is_active" type="BooleanField">True</field>
+    <field name="date_joined" type="DateTimeField">2017-05-16T14:29:54.619987+00:00</field>
+    <field name="groups" rel="ManyToManyRel" to="auth.group"></field>
+    <field name="user_permissions" rel="ManyToManyRel" to="auth.permission"></field>
+  </object>
+  <object model="auth.user" pk="3">
+    <field name="password" type="CharField">pbkdf2_sha256$24000$QP6LMsjKqMgm$66cYpjLqvDEx6TlQFCCQWhxv2E8wRNqU9PJRlvkAS2M=</field>
+    <field name="last_login" type="DateTimeField">2017-05-30T16:31:30.774387+00:00</field>
+    <field name="is_superuser" type="BooleanField">False</field>
+    <field name="username" type="CharField">prova@gmail.com</field>
+    <field name="first_name" type="CharField"></field>
+    <field name="last_name" type="CharField"></field>
+    <field name="email" type="CharField">prova@gmail.com</field>
+    <field name="is_staff" type="BooleanField">False</field>
+    <field name="is_active" type="BooleanField">True</field>
+    <field name="date_joined" type="DateTimeField">2017-05-30T16:31:24.938206+00:00</field>
+    <field name="groups" rel="ManyToManyRel" to="auth.group"></field>
+    <field name="user_permissions" rel="ManyToManyRel" to="auth.permission"></field>
+  </object>
+  <object model="usuaris.perfil" pk="2">
+    <field name="usuari" rel="OneToOneRel" to="auth.user">2</field>
+    <field name="is_admin" type="BooleanField">True</field>
+  </object>
+  <object model="usuaris.perfil" pk="3">
+    <field name="usuari" rel="OneToOneRel" to="auth.user">3</field>
+    <field name="is_admin" type="BooleanField">False</field>
+  </object>
+</django-objects>
