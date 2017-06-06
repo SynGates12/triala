@@ -18,9 +18,9 @@
     color:white;
 }
 
-.grupp{
+.grup{
     display: flex;
-    flex-direction:row;
+    flex-direction:column;
     flex-wrap:wrap;
 
 }
@@ -46,6 +46,53 @@
 .tit{
     color:#333;
 }
+
+#comentaris{
+    background-color:white;
+    color:#333;
+    padding:5px;
+    margin-top:70px;
+    border-top:1px solid #CCCCCC;
+    padding-top:30px;
+}
+
+.comentari{
+    background-color:#EEEEEE;
+    padding:10px;
+    margin-bottom: 10px;
+    border-bottom:1px solid #CCCCCC;
+}
+
+.coment-1{
+    display: flex;
+    flex-direction:row;
+}
+
+.data{
+    margin-left:10px;
+}
+
+#formulari_comenta{
+    color:#333;
+}
+
+.boto{
+    float:right;
+}
+
+#coments{
+    color:#333;
+    background-color: white;
+    border-radius:4px;
+    padding:10px;
+    margin-top:30px;
+}
+
+
+#entra-comenta{
+    text-align: center;
+}
+
 
 @media only screen and (min-width:900px){
     

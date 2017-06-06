@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+    {% block title %} Eliminar {{grup.nom_grup}} {% endblock %}
+    
+    {% block extra-head %}
+    {% load static %}  
+        <link href="{%static "css/global.css" %}" rel="stylesheet">
+        
+    {% endblock %}
+    
+    {% block content %}
+  
+      
+      
+      
+    <div id="content">
+       {% if user.perfil.is_admin %}
+           <div class="panel panel-danger panell-esborra">
+               
+                    <div class="panel-heading" >
+                        <h3 class="panel-title">Atenció!!! <span class="glyphicon glyphicon-exclamation-sign"></span></h3>
+                    </div>
+                    <div class="panel-body" style="color:#A94442;">
+                        <div class="text-esborrra">Si esborres el grup no podràs recuperarla</div>
+                        <div class="botons-esborra">
+                            <form id="esborra" method ="post" action="">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger"> Esborrar <span class="glyphicon glyphicon-trash"></span></button>
+                                <button type="submit" class="btn btn-success esb"><a href="{% url "guitarra:grups" %}"> Torna Enrere </button>    
+                            </form>    
+                            
+                            
+                        </div>
+                       
+                    </div>
+                
+            </div>
+       
+       
+       
+       {%else%}
+       
+       
+       
+       {%endif%}
+            
+          
+            
+            
+
+          
+    </div>    
+    {% endblock %}

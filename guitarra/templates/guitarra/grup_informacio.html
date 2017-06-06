@@ -21,11 +21,28 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-            <a class="navbar-brand logoss" href="{% url "guitarra:index" %}">Triala.cat</a>
+            <a class="navbar-brand" href="{% url "guitarra:index" %}">Triala.cat</a>
           </div>
           
            <div id="navbar" class="navbar-collapse collapse">
           
+            <ul class="nav navbar-nav navbar">
+                    {% if user.perfil.is_admin %}
+                     <ul class="nav navbar-nav">
+                      <li><a href="{% url "guitarra:guitarres" %}">Guitarres <span class="sr-only"></span></a></li>
+                      <li><a href="{% url "guitarra:afegir_guitarra" %}">Afegir Guitarra</a></li>
+                      <li><a href="{% url "guitarra:afegir_grup" %}">Afegir Grup</a></li>
+                      <li><a href="{% url "guitarra:afegir_estil" %}">Afegir Estil</a></li>
+                      
+                    </ul>
+                     
+                    {%else%}
+                    <li><a href="{% url "guitarra:guitarres" %}">Guitarres <span class="sr-only"></span></a></li>
+                    <li><a href="{% url "guitarra:grups" %}">Grups <span class="sr-only"></span></a></li> 
+                    <li><a href="{% url "guitarra:estils" %}">Estils <span class="sr-only"></span></a></li> 
+                     
+                     {%endif%}
+                </ul>     
                 <ul class="nav navbar-nav navbar-right">
                     {% if user.is_authenticated %}
                     <div id="user">
@@ -46,7 +63,6 @@
           </div>
       
       </nav>
-      </nav>
       
          
       
@@ -59,20 +75,46 @@
             <li class="list-group-item">
                
                     <div class="grup">
-                        <div class="name col-md-4"><h1>{{grup.nom_grup}}</h1></div>
-                        <div id="info">
-                            <div class="image_group col-md-4"> <img src="{%if grup.imatge %}{{grup.imatge.url}}{% endif%}"  class="img-responsive img-rounded image" ></div>
-                            <div class="guitarrista col-md-4">{{grup.descripcio_grup}}</div>
-                        </div>
+                        
+                            <div class="name col-md-4"><h1>{{grup.nom_grup}}</h1></div>
+                            <div id="info">
+                                <div class="image_group col-md-4"> <img src="{%if grup.imatge %}{{grup.imatge.url}}{% endif%}"  class="img-responsive img-rounded image" ></div>
+                                <div class="guitarrista col-md-4">{{grup.descripcio_grup}}</div>
+                                
+                                
+                            </div>
+                        
+                        
                     </div>
                 </li>
+                {% if grup.pedals or grup.amplis %}
+                <li class="list-group-item">
+                    Per sonar igual que {{grup.nom_grup}} no només és la guitarra, també necessiterem el següent:
+                    <div class="pedamp">
+                                {% if grup.pedals %}
+                                    <h4>Pedals que fa servir el grup:</h4>
+                                    <div class="pedals">{{grup.pedals}}</div>
+                                {%endif%}
+                                
+                                {% if grup.amplis %}
+                                    <h4>Amplificadors que fa servir el grup:</h4>
+                                    <div class="amplis">{{grup.amplis}}</div>
+                                {%endif%}
+                            </div>
+                </li>
+                {%endif%}
+            </ul>
+            
+            {% if user.perfil.is_admin %}
+                <div class="edita">
+                    <a href="{% url "guitarra:editar_grup" grup.id %}"><button type="button" class="btn btn-success enrere"><span class="glyphicon glyphicon-edit"></span> Editar Grup</button></a>
+                    <a href="{% url "guitarra:eliminar_grup" grup.id %}"><button type="button" class="btn btn-danger enrere"><span class="glyphicon glyphicon-trash"></span> Eliminar Grup</button></a>
                 
-            </ul
+                </div>
+            {% endif %}
             
             
-            
-            
-            <div class="grup">
+            <div class="guitarres-grup">
                 
                 {% for guitarra in guitarra_grup%}
                         

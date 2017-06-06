@@ -18,11 +18,11 @@
 
 
 
-li{
+.list-group-item{
     background-color:#202020 !important;
 }
 
-li:hover{
+.list-group-item:hover{
     background-color:#333 !important;
 }
 

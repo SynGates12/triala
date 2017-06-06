@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 
-    {% block title %} Afegir Estil {% endblock %}
+    {% block title %}Editar Guitarra{% endblock %}
     
     {% block extra-head %}
     {% load static %}  
         <link href="{% static "css/global.css"%}" rel="stylesheet">
         <link href="{% static "css/afegir.css"%}" rel="stylesheet">
+        <link href="{% static "css/afegir_guitarra.css"%}" rel="stylesheet">
     {% endblock %}
     
     {% block content %}
@@ -44,14 +45,14 @@
           </div>
       
       </nav>
-      {% if user.perfil.is_admin %}
+      
       <div id="container">
           <form id="cont-log" action="" method="POST" enctype = "multipart/form-data">
-                      
-                {% for field in form_estil.visible_fields %}
+                     
+                {% for field in form.visible_fields %}
                   {% csrf_token %}
 	              <div class="form-group">
-                    
+                    {{field.label_tag}}
       	            {{ field }}
       	            
       	            {% if field.help_text %}
@@ -69,10 +70,8 @@
       	        </div>        
        {% endfor %}
        <input type="submit" class="formulari boto btn btn-primary" value="Envia">
+       </form>
       </div>
-      {%else%}
-      <div style="text-align:center"><a href="{% url "usuaris:login" %}" style="text-align:center; color:white;"><h3>Log as admin</h3></a></div>
-      {%endif%}
       
       
        </div>   

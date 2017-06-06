@@ -3,7 +3,7 @@
     {% block title %} {{guitarra.nom_guitarra}} {% endblock %}
     
     {% block extra-head %}
-    <link rel="icon" href="{%if guitarra.logo %}{{guitarra.imatge.url}}{% endif%}" class="icon" type="image/png">
+    <link rel="icon" href="{%if guitarra.imatge %}{{guitarra.imatge.url}}{% endif%}" class="icon">
     {% load static %}  
         <link href="{%static "css/global.css" %}" rel="stylesheet">
         <link href="{%static "css/grup_info.css" %}" rel="stylesheet">
@@ -21,11 +21,28 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-            <a class="navbar-brand logoss" href="{% url "guitarra:index" %}">Triala.cat</a>
+            <a class="navbar-brand" href="{% url "guitarra:index" %}">Triala.cat</a>
           </div>
           
            <div id="navbar" class="navbar-collapse collapse">
           
+            <ul class="nav navbar-nav navbar">
+                    {% if user.perfil.is_admin %}
+                     <ul class="nav navbar-nav">
+                      <li><a href="{% url "guitarra:guitarres" %}">Guitarres <span class="sr-only"></span></a></li>
+                      <li><a href="{% url "guitarra:afegir_guitarra" %}">Afegir Guitarra</a></li>
+                      <li><a href="{% url "guitarra:afegir_grup" %}">Afegir Grup</a></li>
+                      <li><a href="{% url "guitarra:afegir_estil" %}">Afegir Estil</a></li>
+                      
+                    </ul>
+                     
+                    {%else%}
+                    <li><a href="{% url "guitarra:guitarres" %}">Guitarres <span class="sr-only"></span></a></li>
+                    <li><a href="{% url "guitarra:grups" %}">Grups <span class="sr-only"></span></a></li> 
+                    <li><a href="{% url "guitarra:estils" %}">Estils <span class="sr-only"></span></a></li> 
+                     
+                     {%endif%}
+                </ul>     
                 <ul class="nav navbar-nav navbar-right">
                     {% if user.is_authenticated %}
                     <div id="user">
@@ -46,7 +63,6 @@
           </div>
       
       </nav>
-      </nav>
       
       
       
@@ -58,7 +74,7 @@
                
                     <div class="grup">
                         <div class="noms">
-                            <div class="nom_guitar col-md-6"><h3><b>{{guitarra.nom_guitarra}}</b></h3></div>
+                            <div class="nom_guitar col-md-6"><h4><b>{{guitarra.nom_guitarra}}</b></h4></div>
                             <div class="logo col-md-6"> <img src="{%if guitarra.logo %}{{guitarra.logo.url}}{% endif%}"  class="img-responsive logo_guitarra" ></div>
                         </div>
                         
@@ -95,33 +111,51 @@
                                     
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
             </div>
+            {% if user.perfil.is_admin %}
+                <div class="edita">
+                    <a href="{% url "guitarra:editar_guitarra" guitarra.id %}"><button type="button" class="btn btn-success enrere"><span class="glyphicon glyphicon-edit"></span> Editar Guitarra</button></a>
+                    <a href="{% url "guitarra:eliminar_guitarra" guitarra.id %}"><button type="button" class="btn btn-danger enrere"><span class="glyphicon glyphicon-trash"></span> Eliminar Guitarra</button></a>
+                
+                </div>
+            {% endif %}
+            
+            
            {% if user.is_authenticated %}
-            <div id="formulari_comenta">
-                <form action="" method="post"> {% csrf_token %}
-                   {% for field in form %}
-                                <div class="form-group">
-                        {{ field.label_tag }}: {{ field }}
-                    </div>
-                {% endfor %}
-	              
-             <input type="submit" class="formulari boto btn btn-primary" value="Envia">
-             </form>  
-                
-            </div>
-            <div="comentaris">
-                {% for com in comentari %}
-                    {{com.text}}
-                    {{com.data}}
-                    {{com.usuari.usuari}}
-                {% endfor %}    
-                
-                
+           <div id="coments">
+               <h4>Comentaris<small> • {{comentari.count}}</small></h4>
+                <div id="formulari_comenta">
+                    <form action="" method="post"> {% csrf_token %}
+                       {% for field in form %}
+                                    <div class="form-group">
+                           {{ field }}
+                        </div>
+                    {% endfor %}
+    	              
+                 <input type="submit" class="formulari boto btn btn-primary" value="Envia">
+                 </form>  
+                    
+                </div>
+                <div id="comentaris">
+                    
+                    {% for com in comentari %}
+                       <div class="comentari"> 
+                            <div class="coment-1">
+                                <div class="usuari"><h4>{{com.usuari.usuari}}</h4></div>
+                                <div class="data"><h4><small>{{com.data}}</small></h4></div>
+                            </div>
+                            <div class="text">{{com.text}}</div>
+                        </div>
+                    {% endfor %}    
+                    
+                    
+                </div>
             </div>
             {%else%}
-            -<a href="{% url "usuaris:login" %}">Entra</a> per comentar-
+            <div id="entra-comenta"><a href="{% url "usuaris:login" %}"><h3>-Entra per comentar i veure els comentaris-</h3></a></div> 
             {%endif%}
             
       </div>

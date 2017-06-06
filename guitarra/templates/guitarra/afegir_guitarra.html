@@ -45,7 +45,7 @@
           </div>
       
       </nav>
-      
+      {% if user.perfil.is_admin %}
       <div id="container">
           <form id="cont-log" action="" method="POST" enctype = "multipart/form-data">
                      
@@ -70,8 +70,11 @@
       	        </div>        
        {% endfor %}
        <input type="submit" class="formulari boto btn btn-primary" value="Envia">
+       </form>
       </div>
-      
+      {%else%}
+      <div style="text-align:center"><a href="{% url "usuaris:login" %}" style="text-align:center; color:white;"><h3>Log as admin</h3></a></div>
+      {%endif%}
       
        </div>   
    <div class="footer"><nav class="navbar navbar-inverse foo"><nav></div>

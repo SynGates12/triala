@@ -21,7 +21,13 @@ urlpatterns = [
     url(r'^(?P<forma_id>\d+)/(?P<n_cordes_id>\d+)/(?P<fusta_c_id>\d+)$', views.fusta_d, name="fusta_d"),
     url(r'^(?P<forma_id>\d+)/(?P<n_cordes_id>\d+)/(?P<fusta_c_id>\d+)/(?P<fusta_d_id>\d+)$', views.pastilles, name="pastilles"),
     url(r'^(?P<forma_id>\d+)/(?P<n_cordes_id>\d+)/(?P<fusta_c_id>\d+)/(?P<fusta_d_id>\d+)/(?P<pastilles_id>\d+)$', views.tremolo, name="tremolo"),
-    url(r'^(?P<forma_id>\d+)/(?P<n_cordes_id>\d+)/(?P<fusta_c_id>\d+)/(?P<fusta_d_id>\d+)/(?P<pastilles_id>\d+)/(?P<tremolo_id>\d+)$', views.imatge_final, name="imatge_final")
+    url(r'^(?P<forma_id>\d+)/(?P<n_cordes_id>\d+)/(?P<fusta_c_id>\d+)/(?P<fusta_d_id>\d+)/(?P<pastilles_id>\d+)/(?P<tremolo_id>\d+)$', views.imatge_final, name="imatge_final"),
+    url(r'^(?P<guitarra_id>\d+)/editar_guitarra/$', views.editar_guitarra, name="editar_guitarra"),
+    url(r'^(?P<guitarra_id>\d+)/eliminar_guitarra/$', views.eliminar_guitarra, name="eliminar_guitarra"),
+    url(r'^(?P<grup_id>\d+)/editar_grup/$', views.editar_grup, name="editar_grup"),
+    url(r'^(?P<grup_id>\d+)/eliminar_grup/$', views.eliminar_grup, name="eliminar_grup"),
+    url(r'^(?P<estil_musica_id>\d+)/editar_estil/$', views.editar_estil, name="editar_estil"),
+    url(r'^(?P<estil_musica_id>\d+)/eliminar_estil/$', views.eliminar_estil, name="eliminar_estil")
    
 
 ]

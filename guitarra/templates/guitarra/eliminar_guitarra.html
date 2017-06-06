@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+    {% block title %} Eliminar {{guitarra.nom_guitarra}} {% endblock %}
+    
+    {% block extra-head %}
+    <link rel="icon" href="{%if guitarra.imatge %}{{guitarra.imatge.url}}{% endif%}" class="icon">
+    {% load static %}  
+        <link href="{%static "css/global.css" %}" rel="stylesheet">
+        
+    {% endblock %}
+    
+    {% block content %}
+  
+      
+      
+      
+    <div id="content">
+       {% if user.perfil.is_admin %}
+           <div class="panel panel-danger panell-esborra">
+               
+                    <div class="panel-heading" >
+                        <h3 class="panel-title">Atenció!!! <span class="glyphicon glyphicon-exclamation-sign"></span></h3>
+                    </div>
+                    <div class="panel-body" style="color:#A94442;">
+                        <div class="text-esborrra">Si esborres la guitarra no podràs recuperarla</div>
+                        <div class="botons-esborra">
+                            <form id="esborra" method ="post" action="">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger"> Esborrar <span class="glyphicon glyphicon-trash"></span></button>
+                                <button type="submit" class="btn btn-success esb"><a href="{% url "guitarra:guitarres" %}"> Torna Enrere </button>    
+                            </form>    
+                            
+                            
+                        </div>
+                       
+                    </div>
+                
+            </div>
+       
+       
+       
+       {%else%}
+       
+       
+       
+       {%endif%}
+            
+          
+            
+            
+
+          
+    </div>    
+    {% endblock %}

@@ -66,11 +66,16 @@
                     </div>
                 </li>
                 
-        
-            
+            {% if user.perfil.is_admin %}
+                <div class="edita">
+                    <a href="{% url "guitarra:editar_estil" estil.id %}"><button type="button" class="btn btn-success enrere"><span class="glyphicon glyphicon-edit"></span> Editar Estil</button></a>
+                    <a href="{% url "guitarra:eliminar_estil" estil.id %}"><button type="button" class="btn btn-danger enrere"><span class="glyphicon glyphicon-trash"></span> Eliminar Estil</button></a>
+                
+                </div>
+            {% endif %}
+            </ul>
             
             <div class="guitarra">
-                <h2 class="tit">Guitarres relacionades: </h2>
                 {% for guitarra in guitarra_estil%}
                         
                     

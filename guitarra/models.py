@@ -3,7 +3,6 @@ from django.utils.encoding import python_2_unicode_compatible
 
 from django.db import models
 
-
 # Create your models here.
 @python_2_unicode_compatible 
 class Forma (models.Model):
@@ -57,7 +56,7 @@ class Color (models.Model):
 @python_2_unicode_compatible 
 class Estil_musica (models.Model):
     nom_estil = models.CharField(max_length=150)
-    descripcio_estil = models.CharField(max_length=500)
+    descripcio_estil = models.TextField(max_length=3000)
     imatge = models.ImageField(upload_to='media',
                               blank=True)
     
@@ -67,7 +66,9 @@ class Estil_musica (models.Model):
 @python_2_unicode_compatible    
 class Grup (models.Model):
     nom_grup = models.CharField(max_length=150)
-    descripcio_grup = models.CharField(max_length=500)
+    descripcio_grup = models.CharField(max_length=1000)
+    pedals = models.CharField(max_length=1000, null = True)
+    amplis = models.CharField(max_length=1000, null = True)
     imatge = models.ImageField(upload_to='media',
                               blank=True)
                             
@@ -78,7 +79,7 @@ class Grup (models.Model):
     
 class Guitarra (models.Model):
     nom_guitarra = models.CharField(max_length=300, null=True,)
-    descripcio_guitarra = models.CharField(max_length=3000, null=True,)
+    descripcio_guitarra = models.TextField(max_length=3000, null=True,)
     preu = models.IntegerField(null=True,)
     color = models.ForeignKey(Color,on_delete=models.CASCADE,)
     forma = models.ForeignKey(Forma,on_delete=models.CASCADE,)

@@ -10,6 +10,8 @@ from .models import Grup, Estil_musica
 class nou_grup (forms.Form):
     nom_grup = forms.CharField(max_length=120)
     descripcio_grup = forms.CharField(max_length=1000, widget=forms.Textarea)
+    pedals = forms.CharField(max_length=1000, widget=forms.Textarea)
+    amplis = forms.CharField(max_length=1000, widget=forms.Textarea)
     imatge = forms.ImageField(label='Selecciona un arxiu')
     
 #afegir Estil    
