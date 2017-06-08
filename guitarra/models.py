@@ -35,7 +35,6 @@ class Fusta_d (models.Model):
 @python_2_unicode_compatible     
 class Pastilles (models.Model):
     pastilles = models.CharField(max_length=100)
-    
     def __str__(self):
         return self.pastilles 
     
